@@ -74,7 +74,7 @@
     font-weight: 500;
     @include transition(.3);
     &.has-content {
-      border-color: $defaultText;
+      // border-color: $defaultText;
     }
     @media (max-width: $breakpoint-md) {
       font-size: 14px;
@@ -156,7 +156,7 @@
     line-height: 24px;
     // color: $heavyGreyColor;
     & span {
-      color: $defaultText;
+      // color: $defaultText;
       font-weight: 700;
       padding: 0 4px;
     }

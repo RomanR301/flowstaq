@@ -21,17 +21,17 @@
         &.btn-primary {
           @include transition(0.3);
           background: $whiteColor;
-          color: $defaultText;
+          // color: $defaultText;
           cursor: pointer;
           @media (max-width: $breakpoint-md) {
             padding: 4px 12px;
           }
           &:hover {
-            background: $defaultText;
+            // background: $defaultText;
             color: $whiteColor;
           }
           &.active {
-            background: $defaultText;
+            // background: $defaultText;
             color: $whiteColor;
           }
         }

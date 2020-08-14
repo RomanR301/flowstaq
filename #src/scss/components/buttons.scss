@@ -3,9 +3,9 @@
 
 .btn {
   &-primary, &-outline {
-    background: $redColor;
+    // background: $redColor;
     color: $whiteColor;
-    border: 2px solid $redColor;
+    // border: 2px solid $redColor;
     font-size: 16px;
     line-height: 24px;
     padding: 9px 24px;
@@ -18,7 +18,7 @@
   }
   &-outline {
     background: $whiteColor;
-    color: $redColor;
+    // color: $redColor;
   }
   &-link {
     position: relative;
@@ -29,7 +29,7 @@
       left: 0;
       width: 100%;
       height: 2px;
-      background: $defaultText;
+      // background: $defaultText;
       @include transition(.3);
     }
     &:hover {

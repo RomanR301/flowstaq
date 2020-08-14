@@ -19,6 +19,7 @@ time, mark, audio, video {
   border: 0;
   font-size: 100%;
   font-family: 'SpaceGrotesk', sans-serif;
+  color: $whiteColor;
   font-weight: 400;
   vertical-align: baseline;
   -webkit-tap-highlight-color:  rgba(255, 255, 255, 0);
@@ -26,21 +27,17 @@ time, mark, audio, video {
 
 body {
   position: relative;
-  background: $bodyBackground;
+  background: $blackColor;
+  color: $whiteColor;
   font-family: 'SpaceGrotesk', sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.7;
-  color: $whiteColor;
-  // overflow-x: hidden;
-  @media (max-width: $breakpoint-xl) {
-    font-size: 15px;
-  }
 }
 
 a {
   text-decoration: none;
-  color: $defaultText;
+  // color: $defaultText;
 }
 
 article, aside, details, figcaption, figure,

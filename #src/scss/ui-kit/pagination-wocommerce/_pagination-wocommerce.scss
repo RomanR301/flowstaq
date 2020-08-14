@@ -10,7 +10,7 @@
   border: none;
 }
 .woocommerce nav.woocommerce-pagination ul li a:focus, .woocommerce nav.woocommerce-pagination ul li a:hover, .woocommerce nav.woocommerce-pagination ul li span.current {
-  color: $defaultText;
+  // color: $defaultText;
   background: $whiteColor;
 }
 .woocommerce-pagination {
@@ -35,12 +35,12 @@
     // border: 2px solid #333333;
 
     &:hover {
-      color: $defaultText;
+      // color: $defaultText;
     }
   }
   .page-numbers .current {
     border: 2px solid #333333;
-    color: $defaultText;
+    // color: $defaultText;
     margin: 0 10px;
   }
   & .prev, & .next {
@@ -48,7 +48,7 @@
      font-family: 'icomoon';
      display: block;
      content: "\e901";
-     color: $defaultText;
+    //  color: $defaultText;
      font-size: 40px;
      transform: rotate(180deg);
      @include transition(.3);

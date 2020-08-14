@@ -60,7 +60,7 @@
 @mixin underline($width, $height) {
   content: '';
   position: absolute;
-  background: $redColor;
+  // background: $redColor;
   right: 0;
   width: $width;
   height: $height;

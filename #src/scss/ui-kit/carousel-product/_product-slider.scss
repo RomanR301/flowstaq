@@ -25,9 +25,9 @@
       @include transition(.3);
     }
     &:hover {
-      border: 2px solid $defaultText;
+      // border: 2px solid $defaultText;
       &:after {
-        color: $defaultText;
+        // color: $defaultText;
       }
     }
   }

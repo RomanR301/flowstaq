@@ -1,0 +1,106 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.--semibold {
+  font-weight: 600;
+}
+
+.--regular {
+  font-weight: 400;
+}
+
+.--medium {
+  font-weight: 500;
+}
+
+.--bold {
+  font-weight: 700;
+}
+
+.--uppercase {
+  text-transform: uppercase;
+}
+
+.heading-1 {
+  @include fontSize(40, 110);
+  line-height: 1.07;
+}
+
+.heading-2 {
+  @include fontSize(24, 88);
+  line-height: 1.33;
+}
+
+.heading-3 {
+  @include fontSize(24, 64);
+  line-height: 1.16;
+}
+
+.heading-4 {
+  @include fontSize(16, 36);
+  line-height: 1.33;
+}
+
+.heading-5 {
+  @include fontSize(14, 24);
+  line-height: 1.33;
+}
+
+.heading-5 {
+  @include fontSize(14, 16);
+  line-height: 1.33;
+}
+
+.section-heading {
+  font-weight: 900;
+  @include fontSize(36, 56);
+  line-height: 1;
+}
+
+.heading-underlined {
+  display: inline-block;
+  position: relative;
+  margin-bottom: 76px;
+  &:before {
+    @include underline(150%, 4px);
+    bottom: -20px;
+  }
+}
+
+.icon-checkmark1:before {
+  content: "\e908";
+  color: #fff;
+}
+.icon-icon-arrow-slider-2:before {
+  content: "\e901";
+}
+.icon-icon-arrow-slider-1:before {
+  content: "\e900";
+}
+.icon-icon-cart:before {
+  content: "\e902";
+}
+.icon-icon-facebook:before {
+  content: "\e903";
+}
+.icon-icon-instagram:before {
+  content: "\e904";
+}
+.icon-icon-search:before {
+  content: "\e905";
+}
+.icon-icon-send:before {
+  content: "\e906";
+}
+.icon-icon-tick:before {
+  content: "\e907";
+}
+

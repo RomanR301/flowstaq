@@ -1,0 +1,33 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+.--relative {
+  position: relative;
+}
+
+.full-height {
+  height: 100%;
+}
+
+.default-icon {
+  & img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+body.active {
+  overflow: hidden;
+}
+
+section {
+  @media (max-width: $breakpoint-md) {
+    margin-bottom: 30px;
+  }
+}
+
+main {
+  margin-bottom: 60px;
+}

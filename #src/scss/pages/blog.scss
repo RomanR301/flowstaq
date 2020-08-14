@@ -1,0 +1,295 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+.dots {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  pointer-events: none;
+  &:before {
+    content: '';
+    position: absolute;
+    background:
+        linear-gradient(90deg, $bg-color ($dot-space - $dot-size), transparent 1%) center,
+        linear-gradient($bg-color ($dot-space - $dot-size), transparent 1%) center,
+        $dot-color;
+      background-size: $dot-space $dot-space;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    background: #fff;
+    z-index: 1;
+  }
+  &-1 {
+    &:before {
+      width: 400px;
+      height: 200px;
+      top: 19%;
+      left: -150px;
+    }
+    &:after {
+      width: 400px;
+      height: 150px;
+      top: 22%;
+      left: -230px;
+    }
+  }
+  &-2 {
+    &:before {
+      width: 400px;
+      height: 200px;
+      top: 28%;
+      right: -220px;
+    }
+    &:after {
+      width: 400px;
+      height: 190px;
+      top: 26%;
+      right: -290px;
+    }
+  }
+  &-3 {
+    &:before {
+      width: 400px;
+      height: 300px;
+      top: 45%;
+      left: -120px;
+    }
+    &:after {
+      width: 400px;
+      height: 290px;
+      top: 42%;
+      left: -210px;
+    }
+  }
+  &-4 {
+    &:before {
+      height: 400px;
+      width: 400px;
+      right: -200px;
+      bottom: 100px;
+    }
+    &:after {
+      width: 230px;
+      height: 270px;
+      bottom: 165px;
+      right: -100px;
+    }
+  }
+}
+
+.blog {
+  overflow: hidden;
+  position: relative;
+  &-item {
+    display: block;
+    position: relative;
+    &__image {
+      z-index: 2;
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+      height: 100%;
+      &:before {
+        content: '';
+        background: rgba(0,0,0,.4);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+      }
+      & img {
+        display: block;
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        @include transition(.4);
+      }
+    }
+    &__text {
+      position: absolute;
+      bottom: 30px;
+      left: 30px;
+      z-index: 2;
+      padding: 0 10px;
+      @media (max-width: $breakpoint-md) {
+        bottom: 15px;
+        left: 10px;
+      }
+      & h2 {
+        @include fontSize(20, 36);
+        line-height: 1.3;
+        color: $whiteColor;
+        margin-bottom: 36px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 4 ;
+        -webkit-box-orient: vertical;
+      }
+      & span {
+        font-size: 16px;
+        line-height: 24px;
+        display: flex;
+        align-items: center;
+        color: $whiteColor;
+        &:after {
+          content: '';
+          width: 30px;
+          height: 2px;
+          background: $whiteColor;
+          margin-left: 12px;
+        }
+      }
+    }
+    &:hover {
+      & .blog-item__image {
+        & img {
+          transform: scale(1.07);
+        }
+      }
+    }
+  }
+}
+
+.blog {
+  &-item {
+    margin: 0 12px 40px 12px;
+    &:nth-child(1), &:nth-child(3), &:nth-child(5), &:nth-child(7) {
+      margin: 0 24px 60px 0;
+      @media (max-width: $breakpoint-md) {
+        margin: 0 0 30px 0;
+      }
+    }
+    @media (max-width: $breakpoint-md) {
+      margin: 0 0 30px 0;
+    }
+    &:nth-child(1), &:nth-child(4), &:nth-child(5), &:nth-child(8) {
+      width: get-vw(320px);
+      height: get-vw(320px);
+      @media (max-width: $breakpoint-lg) {
+        width: get-vw(340px);
+      }
+      @media (max-width: $breakpoint-md) {
+        width: 100%;
+        height: 260px;
+      }
+    }
+    &:nth-child(2), &:nth-child(3), &:nth-child(6), &:nth-child(7) {
+      width: get-vw(550px);
+      height: get-vw(320px);  
+      @media (max-width: $breakpoint-lg) {
+        width: get-vw(490px);
+      }
+      @media (max-width: $breakpoint-md) {
+        width: 100%;
+        height: 260px;
+      }
+      & .blog-item__text {
+        max-width: 60%;
+        @media (max-width: $breakpoint-md) {
+          max-width: 100%;
+        }
+      }
+    }
+    &:nth-child(even) {
+      margin-top: 20px;
+      @media (max-width: $breakpoint-md) {
+        margin-top: 0;
+      }
+    }
+    &:nth-child(3), &:nth-child(7) {
+      margin-left: -9%;
+    }
+  }
+}
+
+// Single blog
+
+.single-blog {
+  position: relative;
+  padding-bottom: 76px;
+  overflow: hidden;
+  @media (max-width: $breakpoint-md) {
+    padding-bottom: 0;
+  }
+  &__dots {
+    margin-top: 36px;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+    @media (max-width: $breakpoint-md) {
+      display: none;
+    }
+    &:before {
+      width: 80%;
+      height: 100%;
+      content: '';
+      position: absolute;
+      z-index: -2;
+      pointer-events: none;
+      background:
+          linear-gradient(90deg, $bg-color ($dot-space - $dot-size), transparent 1%) center,
+          linear-gradient($bg-color ($dot-space - $dot-size), transparent 1%) center,
+          $dot-color;
+        background-size: $dot-space $dot-space;
+    }
+    &:after {
+      content: '';
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background: #fff;
+      z-index: -1;
+      pointer-events: none;
+      left: 8%;
+      bottom: 80px;
+    }
+  }
+  &__content {
+    margin-top: 36px;
+  }
+}
+
+.blog-recommendation {
+  &__heading {
+    margin: 24px 0 11px 0;
+    @media (max-width: $breakpoint-md) {
+      font-size: 20px;
+      justify-content: space-between;
+      margin: 0 0 24px 0;
+    }
+  }
+  &-carousel {
+    & .swiper-slide:nth-child(odd) {
+      width: 38%;
+      @media (max-width: $breakpoint-md) {
+        width: 100%;
+      }
+    }
+    & .swiper-slide:nth-child(even) {
+      width: 60%;
+      padding-top: 30px;
+      @media (max-width: $breakpoint-md) {
+        width: 100%;
+        padding-top: 0;
+      }
+      & .blog-item__text {
+        max-width: 50%;
+      }
+    }
+    .blog-item:nth-child(1), .blog-item:nth-child(4), .blog-item:nth-child(5), .blog-item:nth-child(8) {
+      width: unset;
+      margin: 0;
+    }
+  }
+
+ }

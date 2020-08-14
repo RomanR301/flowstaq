@@ -1021,66 +1021,25 @@ input[type=number] {
   font-weight: 700;
 }
 
-.btn-primary,
-.btn-outline {
-  color: #ffffff;
-  font-size: 16px;
-  line-height: 24px;
-  padding: 9px 24px;
-  -webkit-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
-  cursor: pointer;
+.cta {
+  background: none;
+  border: none;
+  font-size: 14px;
+  padding: 10px;
 }
 
-.btn-primary:hover,
-.btn-outline:hover {
-  background: transparent;
-}
-
-.btn-outline {
+.cta-white {
   background: #ffffff;
+  color: #8041F9;
 }
 
-.btn-link {
-  position: relative;
+.cta-purple {
+  background: #8041F9;
+  color: #ffffff;
 }
 
-.btn-link:before {
-  content: '';
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  -webkit-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
-}
-
-.btn-link:hover:before {
-  width: 0;
-}
-
-.icon-icon-filter {
-  background-image: url("../img/icons/filter.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 40px;
-  height: 25px;
-  display: block;
-}
-
-.btn-filter {
-  display: none;
-  width: 100%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin: 5px 0;
+.header-buttons .cta {
+  max-width: 260px;
 }
 
 .entry-content h1 {
@@ -2949,12 +2908,6 @@ button.swiper-pagination-bullet {
 
   .category-carousel-link {
     margin: 10px;
-  }
-
-  .btn-filter {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
   }
 
   .entry-content blockquote {

@@ -70,26 +70,33 @@
 .cta-buttons-mobile {
   @media (max-width: $breakpoint-sm) {
     flex-direction: row-reverse;
+    justify-content: center;
     & .cta {
       height: 180px;
       align-items: flex-start;
-      width: 49.6%;
+      width: 49.5%;
       & span {
-        font-size: 22px;
+        font-size: 16px;
         line-height: 24px;
         max-width: 72%;
-        &.get-pdf {
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          font-size: 16px;
-          padding: 10px;
-        }
+        font-weight: 700;
       }
       & i {
         height: 100%;
         align-items: flex-end;
       }
     }
+  }
+}
+
+.get-pdf {
+  display: none;
+  @media (max-width: $breakpoint-sm) {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 14px;
+    padding: 10px;
   }
 }

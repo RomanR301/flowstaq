@@ -4,6 +4,7 @@
 .hero-screen {
   position: relative;
   height: calc(100vh - 70px);
+  margin-bottom: 250px;
   @media (min-width: $breakpoint-xxl) {
     height: calc(100vh - 90px);
   }
@@ -18,6 +19,140 @@
         display: block;
         transform: rotate(-90deg);
       }
+    }
+  }
+}
+
+.info-block {
+  margin-bottom: 200px;
+  &__heading {
+    margin-bottom: 100px;
+  }
+  &__image {
+
+  }
+  &__content {
+    padding-left: 90px;
+    max-width: 82%;
+    @media (min-width: $breakpoint-xxl) {
+      padding-left: 120px;
+    }
+    & p {
+      font-size: 26px;
+      line-height: 1.05;
+      @media (min-width: $breakpoint-xxl) {
+        font-size: 33px;
+      }
+    }
+  }
+}
+
+.tools {
+  margin-bottom: 130px;
+  &-content {
+    margin-top: -50px;
+  }
+  &__title {
+    margin-bottom: 20px;
+    @media (min-width: $breakpoint-xxl) {
+      margin-bottom: 36px;
+    }
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__item {
+    width: 220px;
+    margin-bottom: 45px;
+    @media (min-width: $breakpoint-xxl) {
+      width: 270px;
+      margin-bottom: 75px;
+    }
+    & img {
+      display: block;
+      width: 100%;
+    }
+  }
+  &__addition {
+    font-size: 18px;
+    line-height: 1.1;
+    font-weight: 500;
+    @media (min-width: $breakpoint-xxl) {
+      font-size: 24px;
+    }
+  }
+}
+
+.services {
+  margin-bottom: 300px;
+  @media (min-width: $breakpoint-xxl) {
+    margin-bottom: 400px;
+  }
+  &__heading {
+    margin-bottom: 90px;
+    @media (min-width: $breakpoint-xxl) {
+      margin-bottom: 120px;
+    }
+  }
+  &-container {
+    display: flex;
+    justify-content: flex-end;
+  }
+  &-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: auto;
+  }
+  &__item {
+    background: $purpleColor;
+    padding: 20px;
+    width: 32%;
+    margin: 0 6px 26px 6px;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    &:nth-of-type(3n) {
+      margin-right: 0;
+    }
+    @media (min-width: $breakpoint-xxl) {
+      width: 31.6%;
+      padding: 24px;
+      margin: 0 8px 34px 8px;
+      min-height: 250px;
+    }
+    &_icon {
+      
+    }
+    &_description {
+      max-width: 80%;
+    }
+    &_arrow {
+      
+      & i {
+        &:before {
+          display: block;
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+}
+
+.platforms {
+  &__heading {
+    margin-bottom: 100px;
+  }
+  &__item {
+    padding: 0 55px;
+    margin-bottom: 30px;
+    @media (min-width: $breakpoint-xxl) {
+      padding: 0 75px;
+      margin-bottom: 40px;
     }
   }
 }

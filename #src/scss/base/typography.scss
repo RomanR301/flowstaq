@@ -53,6 +53,15 @@
   line-height: 1.16;
 }
 
+.text-33 {
+  font-size: 24px;
+  line-height: 1.1;
+  font-weight: 700;
+  @media (min-width: $breakpoint-xxl) {
+    font-size: 33px;
+  }
+}
+
 .heading-4 {
   @include fontSize(16, 36);
   line-height: 1.33;
@@ -86,4 +95,13 @@
 
 .icon-arrow:before {
   content: "\e900";
+}
+
+.icon-search {
+  display: block;
+  background: url('../img/icons/icon-search.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 25px;
+  height: 25px;
 }

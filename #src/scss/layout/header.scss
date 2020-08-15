@@ -20,11 +20,11 @@
     height: 90px;
   }
   &-logo {
-    max-width: 150px;
+    width: 150px;
     display: block;
     margin-right: 24px;
     @media (min-width: $breakpoint-xxl) {
-      max-width: 260px;
+      width: 260px;
       margin-right: 48px;
     }
     & img {

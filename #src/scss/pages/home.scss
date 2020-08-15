@@ -144,15 +144,126 @@
 }
 
 .platforms {
+  margin-bottom: 250px;
+  @media (min-width: $breakpoint-xxl) {
+    margin-bottom: 330px;
+  }
   &__heading {
     margin-bottom: 100px;
   }
   &__item {
-    padding: 0 55px;
-    margin-bottom: 30px;
+    margin: 0 150px 30px 0;
     @media (min-width: $breakpoint-xxl) {
-      padding: 0 75px;
       margin-bottom: 40px;
+    }
+  }
+}
+
+.cases {
+  margin-bottom: 240px;
+  @media (min-width: $breakpoint-xxl) {
+    margin-bottom: 300px;
+  }
+  &__item {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    &_content {
+      position: absolute;
+      bottom: 24px;
+      right: 24px;
+      background: $purpleColor;
+      width: 70%;
+      padding: 30px;
+    }
+
+    &_description {
+      max-width: 80%;
+      @include transition(.3);
+    }
+    &_more {
+      position: absolute;
+      top: 30px;
+      opacity: 0;
+      @include transition(.3);
+    }
+    &_arrow {
+      & i {
+        &:before {
+          display: block;
+          transform: rotate(180deg);
+        }
+      }
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      background: $darkPurpleColor;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      transform: translate(100%, 100%);
+      @include transition(.3);
+    }
+    &:hover {
+      &:before {
+        transform: translate(0,0);
+      }
+      & .cases__item_description {
+        opacity: 0;
+      }
+      & .cases__item_more {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.clients {
+  margin-bottom: 220px;
+  @media (min-width: $breakpoint-xxl) {
+    margin-bottom: 270px;
+  }
+  &__heading {
+    margin-bottom: 60px;
+    @media (min-width: $breakpoint-xxl) {
+      margin-bottom: 80px;
+    }
+  }
+  &-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 70px;
+    @media (min-width: $breakpoint-xxl) {
+      margin-top: 90px;
+    }
+  }
+  &__item {
+    width: 220px;
+    margin-bottom: 45px;
+    @media (min-width: $breakpoint-xxl) {
+      width: 270px;
+      margin-bottom: 75px;
+    }
+    & img {
+      display: block;
+      width: 100%;
+    }
+  }
+}
+
+.calendar {
+  margin-bottom: 120px;
+  @media (min-width: $breakpoint-xxl) {
+    margin-bottom: 150px;
+  }
+  &__heading {
+    margin-bottom: 50px;
+    @media (min-width: $breakpoint-xxl) {
+      margin-bottom: 60px;
     }
   }
 }

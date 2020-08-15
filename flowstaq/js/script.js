@@ -1,6 +1,6 @@
 let front = {
   hamburger: $('.hamburger'),
-  nav: $('.menu-container'),
+  nav: $('.navbar'),
   $body: $('body'),
   init: function () {
       this.events();

@@ -40,23 +40,56 @@
   }
 }
 
-.header-buttons {
+.cta-buttons {
   height: 70px;
   @media (min-width: $breakpoint-xxl) {
     height: 90px;
+  }
+  @media (max-width: $breakpoint-xl) {
+    display: none;
   }
   & .cta {
     width: 210px;
     height: 100%;
     text-align: left;
+    position: relative;
     @media (min-width: $breakpoint-xxl) {
       width: 240px;
     }
     &:hover {
       & i {
         transform: translate(0, 15px);
+        @media (max-width: $breakpoint-xl) {
+          transform: unset;
+        }
       }
     }
   }
 }
 
+.cta-buttons-mobile {
+  @media (max-width: $breakpoint-sm) {
+    flex-direction: row-reverse;
+    & .cta {
+      height: 180px;
+      align-items: flex-start;
+      width: 49.6%;
+      & span {
+        font-size: 22px;
+        line-height: 24px;
+        max-width: 72%;
+        &.get-pdf {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          font-size: 16px;
+          padding: 10px;
+        }
+      }
+      & i {
+        height: 100%;
+        align-items: flex-end;
+      }
+    }
+  }
+}

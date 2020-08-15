@@ -4,20 +4,59 @@
 .cta {
   background: none;
   border: none;
-  font-size: 14px;
   padding: 10px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  & span {
+    font-size: 12px;
+    max-width: 80%;
+    @media (min-width: $breakpoint-xxl) {
+      font-size: 14px;
+    }
+  }
+  & i {
+    width: 36%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include transition(.3);
+    &:before {
+      display: block;
+      transform: rotate(-90deg);
+    }
+  }
   &-white {
     background: $whiteColor;
-    color: $purpleColor;
+    & span {
+      color: $purpleColor;
+    }
+    & i {
+      color: $purpleColor;
+    }
   }
   &-purple {
     background: $purpleColor;
-    color: $whiteColor;
   }
 }
 
 .header-buttons {
+  height: 70px;
+  @media (min-width: $breakpoint-xxl) {
+    height: 90px;
+  }
   & .cta {
-    max-width: 260px;
+    width: 210px;
+    height: 100%;
+    text-align: left;
+    @media (min-width: $breakpoint-xxl) {
+      width: 240px;
+    }
+    &:hover {
+      & i {
+        transform: translate(0, 15px);
+      }
+    }
   }
 }
+

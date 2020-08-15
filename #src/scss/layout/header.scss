@@ -2,20 +2,31 @@
 @import "../abstracts/variables";
 
 .body-padding {
-  padding-top: 80px;
+  padding-top: 70px;
+  @media (min-width: $breakpoint-xxl) {
+    padding-top: 90px;
+  }
 }
 
 .header {
   position: fixed;
   width: 100%;
+  height: 70px;
   background: $blackColor;
+  // background: green;  
   top: 0;
   left: 0;
   z-index: 102;
+  @media (min-width: $breakpoint-xxl) {
+    height: 90px;
+  }
   &-logo {
     max-width: 260px;
     display: block;
-    margin-right: 48px;
+    margin-right: 24px;
+    @media (min-width: $breakpoint-xxl) {
+      margin-right: 48px;
+    }
     & img {
       object-fit: unset;
     }
@@ -28,10 +39,18 @@
 .menu {
   &-item {
     & a {
-      font-size: 22px;
       font-weight: 700;
       display: block;
-      padding: 30px 28px;
+      padding: 20px 14px;
+      font-size: 18px;
+      @include transition(.3);
+      @media (min-width: $breakpoint-xxl) {
+        padding: 26px 28px;
+        font-size: 22px;
+      }
+      &:hover {
+        color: $purpleColor;
+      }
     }
   }
 }

@@ -1,3 +1,23 @@
 @import "../abstracts/mixins";
 @import "../abstracts/variables";
 
+.hero-screen {
+  position: relative;
+  height: calc(100vh - 70px);
+  @media (min-width: $breakpoint-xxl) {
+    height: calc(100vh - 90px);
+  }
+  &__arrow {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    & i {
+      font-size: 30px;
+      &:before {
+        display: block;
+        transform: rotate(-90deg);
+      }
+    }
+  }
+}

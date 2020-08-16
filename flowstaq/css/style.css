@@ -2768,6 +2768,7 @@ button.swiper-pagination-bullet {
 }
 
 .platforms__item {
+  display: block;
   margin: 0 150px 30px 0;
 }
 

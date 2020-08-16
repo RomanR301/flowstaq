@@ -2,164 +2,99 @@
 @import "../abstracts/variables";
 
 
-// .form-checkbox {
-//   position: relative;
-//   margin: 0 24px 4px 0;
-//   & label {
-//     margin-left: get-vw(24px);
-//     @media (max-width: $breakpoint-xl) {
-//       margin-left: 24px;
-//     }
-//     cursor: pointer;
-//     &:before, &:after {
-//       content: '';
-//       position: absolute;
-//       left: 0;
-//       width: get-vw(16px);
-//       height: get-vw(16px);
-//       border: 2px solid $primaryColor;
-//       @include transition(.3);
-//       border-radius: 4px;
-//       cursor: pointer;
-//       @media (max-width: $breakpoint-xl) {
-//         width: 16px;
-//         height: 16px;
-//       }
-//     }
-//   }
-  // & input {
-  //   display: none;
-  //   &:checked ~ label:before {
-  //     background-image: url('../img/icon-checkmark.svg');
-  //     background-repeat: no-repeat;
-  //     background-position: center;
-  //     background-size: 90%;
-  //     z-index: 2;
-  //   }
-  //   &:checked ~ label:after {
-  //     background: $primaryColor;
-  //   }
-  // }
-// }
-
 .form-control {
-  margin-bottom: 40px;
+  margin-bottom: 50px;
   position: relative;
-  @media (max-width: $breakpoint-xl) {
-    margin-bottom: 34px;
+  @media (min-width: $breakpoint-xxl) {
+    margin-bottom: 65px;
   }
-  & input {
-    height: 36px;
-    @media (max-width: $breakpoint-xl) {
-      height: 50px;
+  & textarea, & input {
+    background: none;
+    border: none;
+    color: $whiteColor;
+    font-size: 24px;
+    line-height: 1.1;
+    font-weight: 700;
+    width: 100%;
+    outline: none;
+    @media (min-width: $breakpoint-xxl) {
+      font-size: 33px;
+    }
+    &::placeholder  {
+      color: $whiteColor;
+      @include transition(.3);
+    }
+    &::-moz-placeholder {
+      color: $whiteColor;
+      @include transition(.3);
+      opacity: 1;
+    }
+    &:invalid {
+      box-shadow: none;
+    }
+    
+    &:-moz-submit-invalid {
+      box-shadow: none;
+    }
+    
+    &:-moz-ui-invalid {
+      box-shadow:none;
     }
   }
   & textarea {
-    height: 70px;
     font-family: inherit;
-    font-size: inherit;
     resize: none;
-    @media (max-width: $breakpoint-xl) {
-      height: 100px;
-      padding-top: 5px;
-    }
-  }
-  & input, textarea {
-    width: 100%;
-    font-family: inherit;
-    border: none;
-    outline: none;
-    font-size: 16px;
-    border-bottom: 1px solid #c4c4c4;
-    font-weight: 500;
-    @include transition(.3);
-    &.has-content {
-      // border-color: $defaultText;
-    }
-    @media (max-width: $breakpoint-md) {
-      font-size: 14px;
-    }
-  }
-  & label {
-    position: absolute;
-    left: 0;
-    top: 0;
-    font-size: 12px;
-    line-height: 16px;
-    color: #7C7C7C;
-    transition: all .3s cubic-bezier(1, -0.02, 0, 0.99);
-    pointer-events: none;
-    & span {
-      transition: all .3s cubic-bezier(1, -0.02, 0, 0.99);
-      // color: $redColor;
-      margin-left: 5px;
-    }
-    @media (max-width: $breakpoint-md) {
-      font-size: 14px;
-      line-height: 25px;
-    }
-  }
-  & .form-line {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-  }
-  & input:focus ~ label, & input.has-content ~ label, 
-  & textarea:focus ~ label, & textarea.has-content ~ label {
-    top: -18px;
-    color: #c4c4c4;
-    @media (max-width: $breakpoint-xl) {
-      font-size: 15px;
-      line-height: 25px;
-    }
-  }
-  & .label-name.active {
-    top: -18px;
-    @media (max-width: $breakpoint-xl) {
-      top: -20px;
-      font-size: 14px;
-      line-height: 25px;
-    }
-  }
-}
 
-.search {
-  min-height: calc(100vh - 180px);
-  & .page-heading {
-    margin-bottom: 24px;
   }
-  &-form {
-    margin-left: 20px;
-    position: relative;
-    width: 420px;
-    @media (max-width: $breakpoint-md) {
-      width: 300px;
-    }
+  &:before, &:after {
+    content: '';
+    position: absolute;
+    background: $whiteColor;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    bottom: -3px;
+  }
+  &:after {
+    width: 0;
+    background: $purpleColor;
+    transition: all .3s ease-in-out;
+  }
+  &.active, &.has-content {
     &:after {
-      position: absolute;
-      font-family: icomoon;
-      content: "\e905";
-      right: 15px;
-      top: calc(50% - 17px);
-      font-size: 20px;
-    }
-    & input {
-      padding: 10px 50px 10px 16px;
-      border: 2px solid #333333;
-      font-size: 16px;
       width: 100%;
     }
-  }
-  &-results {
-    margin: 0 0 16px 20px;
-    font-size: 16px;
-    line-height: 24px;
-    // color: $heavyGreyColor;
-    & span {
-      // color: $defaultText;
-      font-weight: 700;
-      padding: 0 4px;
+    & input, & textarea {
+      &::placeholder  {
+        color: $purpleColor;
+      }
+      &::-moz-placeholder {
+        color: $purpleColor;
+        opacity: 1;
+      }
     }
   }
 }
 
+.form-submit {
+  width: 100%;
+  text-align: right;
+  & button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    @include transition(.3);
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    &:hover {
+      transform: translate(4px, 0);
+    }
+  }
+  & i {
+    &:before {
+      display: inline-block;
+      transform: rotate(180deg);
+    }
+  }
+}

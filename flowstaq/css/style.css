@@ -184,6 +184,12 @@ body {
   line-height: 1.7;
 }
 
+.no-focus-outline a:focus,
+.no-focus-outline button:focus,
+.no-focus-outline input:focus {
+  outline: none;
+}
+
 a {
   text-decoration: none;
 }
@@ -290,12 +296,6 @@ input[type=number] {
 }
 
 .heading-3 {
-  font-size: 42px;
-  font-size: calc(24px + (42 - 24) * ((100vw - 300px) / (1900 - 300)));
-  line-height: 1.16;
-}
-
-.text-33 {
   font-size: 24px;
   line-height: 1.1;
   font-weight: 700;
@@ -1302,112 +1302,175 @@ input[type=number] {
 }
 
 .form-control {
-  margin-bottom: 40px;
+  margin-bottom: 50px;
   position: relative;
 }
 
+.form-control textarea,
 .form-control input {
-  height: 36px;
-}
-
-.form-control textarea {
-  height: 70px;
-  font-family: inherit;
-  font-size: inherit;
-  resize: none;
-}
-
-.form-control input,
-.form-control textarea {
-  width: 100%;
-  font-family: inherit;
+  background: none;
   border: none;
+  color: #ffffff;
+  font-size: 24px;
+  line-height: 1.1;
+  font-weight: 700;
+  width: 100%;
   outline: none;
-  font-size: 16px;
-  border-bottom: 1px solid #c4c4c4;
-  font-weight: 500;
+}
+
+.form-control textarea::-webkit-input-placeholder, .form-control input::-webkit-input-placeholder {
+  color: #ffffff;
   -webkit-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
 
-.form-control label {
+.form-control textarea::-moz-placeholder, .form-control input::-moz-placeholder {
+  color: #ffffff;
+  -webkit-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.form-control textarea:-ms-input-placeholder, .form-control input:-ms-input-placeholder {
+  color: #ffffff;
+  -webkit-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.form-control textarea::-ms-input-placeholder, .form-control input::-ms-input-placeholder {
+  color: #ffffff;
+  -webkit-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.form-control textarea::placeholder,
+.form-control input::placeholder {
+  color: #ffffff;
+  -webkit-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.form-control textarea::-moz-placeholder,
+.form-control input::-moz-placeholder {
+  color: #ffffff;
+  -webkit-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  opacity: 1;
+}
+
+.form-control textarea:invalid,
+.form-control input:invalid {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.form-control textarea:-moz-submit-invalid,
+.form-control input:-moz-submit-invalid {
+  box-shadow: none;
+}
+
+.form-control textarea:-moz-ui-invalid,
+.form-control input:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+.form-control textarea {
+  font-family: inherit;
+  resize: none;
+}
+
+.form-control:before,
+.form-control:after {
+  content: '';
   position: absolute;
+  background: #ffffff;
+  width: 100%;
+  height: 2px;
   left: 0;
-  top: 0;
-  font-size: 12px;
-  line-height: 16px;
-  color: #7C7C7C;
-  -webkit-transition: all 0.3s cubic-bezier(1, -0.02, 0, 0.99);
-  -o-transition: all 0.3s cubic-bezier(1, -0.02, 0, 0.99);
-  transition: all 0.3s cubic-bezier(1, -0.02, 0, 0.99);
-  pointer-events: none;
+  bottom: -3px;
 }
 
-.form-control label span {
-  -webkit-transition: all 0.3s cubic-bezier(1, -0.02, 0, 0.99);
-  -o-transition: all 0.3s cubic-bezier(1, -0.02, 0, 0.99);
-  transition: all 0.3s cubic-bezier(1, -0.02, 0, 0.99);
-  margin-left: 5px;
+.form-control:after {
+  width: 0;
+  background: #8041F9;
+  -webkit-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
 }
 
-.form-control .form-line {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-
-.form-control input:focus ~ label,
-.form-control input.has-content ~ label,
-.form-control textarea:focus ~ label,
-.form-control textarea.has-content ~ label {
-  top: -18px;
-  color: #c4c4c4;
-}
-
-.form-control .label-name.active {
-  top: -18px;
-}
-
-.search {
-  min-height: calc(100vh - 180px);
-}
-
-.search .page-heading {
-  margin-bottom: 24px;
-}
-
-.search-form {
-  margin-left: 20px;
-  position: relative;
-  width: 420px;
-}
-
-.search-form:after {
-  position: absolute;
-  font-family: icomoon;
-  content: "\e905";
-  right: 15px;
-  top: calc(50% - 17px);
-  font-size: 20px;
-}
-
-.search-form input {
-  padding: 10px 50px 10px 16px;
-  border: 2px solid #333333;
-  font-size: 16px;
+.form-control.active:after,
+.form-control.has-content:after {
   width: 100%;
 }
 
-.search-results {
-  margin: 0 0 16px 20px;
-  font-size: 16px;
-  line-height: 24px;
+.form-control.active input::-webkit-input-placeholder, .form-control.active textarea::-webkit-input-placeholder, .form-control.has-content input::-webkit-input-placeholder, .form-control.has-content textarea::-webkit-input-placeholder {
+  color: #8041F9;
 }
 
-.search-results span {
-  font-weight: 700;
-  padding: 0 4px;
+.form-control.active input::-moz-placeholder, .form-control.active textarea::-moz-placeholder, .form-control.has-content input::-moz-placeholder, .form-control.has-content textarea::-moz-placeholder {
+  color: #8041F9;
+}
+
+.form-control.active input:-ms-input-placeholder, .form-control.active textarea:-ms-input-placeholder, .form-control.has-content input:-ms-input-placeholder, .form-control.has-content textarea:-ms-input-placeholder {
+  color: #8041F9;
+}
+
+.form-control.active input::-ms-input-placeholder, .form-control.active textarea::-ms-input-placeholder, .form-control.has-content input::-ms-input-placeholder, .form-control.has-content textarea::-ms-input-placeholder {
+  color: #8041F9;
+}
+
+.form-control.active input::placeholder,
+.form-control.active textarea::placeholder,
+.form-control.has-content input::placeholder,
+.form-control.has-content textarea::placeholder {
+  color: #8041F9;
+}
+
+.form-control.active input::-moz-placeholder,
+.form-control.active textarea::-moz-placeholder,
+.form-control.has-content input::-moz-placeholder,
+.form-control.has-content textarea::-moz-placeholder {
+  color: #8041F9;
+  opacity: 1;
+}
+
+.form-submit {
+  width: 100%;
+  text-align: right;
+}
+
+.form-submit button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+}
+
+.form-submit button:hover {
+  -webkit-transform: translate(4px, 0);
+      -ms-transform: translate(4px, 0);
+          transform: translate(4px, 0);
+}
+
+.form-submit i:before {
+  display: inline-block;
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 .product {
@@ -1804,6 +1867,91 @@ input[type=number] {
 .header-logo img {
   -o-object-fit: unset;
      object-fit: unset;
+}
+
+.footer {
+  margin-bottom: 60px;
+}
+
+.footer-logo {
+  margin-bottom: 60px;
+}
+
+.footer-logo a {
+  display: block;
+  width: 180px;
+}
+
+.footer-google a {
+  width: 150px;
+  display: block;
+}
+
+.footer-copyright {
+  margin: -40px 150px 0 0;
+}
+
+.footer-copyright-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer-copyright li,
+.footer-copyright a,
+.footer-copyright span {
+  line-height: 1.2;
+  font-size: 18px;
+}
+
+.footer-copyright-text {
+  margin-top: 20px;
+}
+
+.footer .cta {
+  height: 120%;
+  padding: 26px 16px 16px 26px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+}
+
+.footer .cta span {
+  font-size: 24px;
+  line-height: 1.1;
+  font-weight: 700;
+  margin-bottom: 35px;
+}
+
+.footer .cta .get-pdf {
+  display: block;
+  font-size: 18px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.footer .cta i {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  width: auto;
+}
+
+.footer .cta:hover i {
+  -webkit-transform: translate(0, 8px);
+      -ms-transform: translate(0, 8px);
+          transform: translate(0, 8px);
 }
 
 /**
@@ -2838,6 +2986,62 @@ button.swiper-pagination-bullet {
   margin-bottom: 50px;
 }
 
+.steps-container {
+  position: relative;
+  background: #5C2ECE;
+  padding: 120px 105px;
+  height: 700px;
+  margin-bottom: 230px;
+}
+
+.steps__heading {
+  max-width: 60%;
+  margin-bottom: 35px;
+}
+
+.steps__description {
+  max-width: 40%;
+}
+
+.steps__button {
+  background: #8041F9;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 340px;
+  height: 210px;
+  padding: 30px 20px 15px 30px;
+  cursor: pointer;
+}
+
+.steps__button i {
+  text-align: right;
+  -webkit-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.steps__button i:before {
+  display: inline-block;
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+.steps__button:hover i {
+  -webkit-transform: translate(0, 8px);
+      -ms-transform: translate(0, 8px);
+          transform: translate(0, 8px);
+}
+
+.contacts {
+  margin-bottom: 200px;
+}
+
+.contacts__heading {
+  margin-bottom: 70px;
+}
+
 @media (min-width: 576px) {
   .col-sm-1 {
     -webkit-box-flex: 0;
@@ -3194,11 +3398,6 @@ button.swiper-pagination-bullet {
   }
 
   .heading-3 {
-    font-size: 54px;
-    font-size: calc(28px + (54 - 28) * ((100vw - 300px) / (1900 - 300)));
-  }
-
-  .text-33 {
     font-size: 33px;
   }
 
@@ -3219,6 +3418,15 @@ button.swiper-pagination-bullet {
     width: 240px;
   }
 
+  .form-control {
+    margin-bottom: 65px;
+  }
+
+  .form-control textarea,
+  .form-control input {
+    font-size: 33px;
+  }
+
   .body-padding {
     padding-top: 90px;
   }
@@ -3230,6 +3438,25 @@ button.swiper-pagination-bullet {
   .header-logo {
     width: 260px;
     margin-right: 48px;
+  }
+
+  .footer {
+    margin-bottom: 80px;
+  }
+
+  .footer-copyright li,
+  .footer-copyright a,
+  .footer-copyright span {
+    font-size: 22px;
+  }
+
+  .footer .cta {
+    padding: 33px 20px 20px 33px;
+  }
+
+  .footer .cta span {
+    font-size: 33px;
+    margin-bottom: 50px;
   }
 
   .hero-screen {
@@ -3307,6 +3534,29 @@ button.swiper-pagination-bullet {
 
   .calendar__heading {
     margin-bottom: 60px;
+  }
+
+  .steps-container {
+    margin-bottom: 270px;
+    padding: 145px 130px;
+    height: 900px;
+  }
+
+  .steps__heading {
+    margin-bottom: 50px;
+  }
+
+  .steps__button {
+    width: 400px;
+    height: 250px;
+  }
+
+  .contacts {
+    margin-bottom: 250px;
+  }
+
+  .contacts__heading {
+    margin-bottom: 90px;
   }
 }
 
@@ -3395,33 +3645,6 @@ button.swiper-pagination-bullet {
         -ms-transform: unset;
             transform: unset;
   }
-
-  .form-control {
-    margin-bottom: 34px;
-  }
-
-  .form-control input {
-    height: 50px;
-  }
-
-  .form-control textarea {
-    height: 100px;
-    padding-top: 5px;
-  }
-
-  .form-control input:focus ~ label,
-  .form-control input.has-content ~ label,
-  .form-control textarea:focus ~ label,
-  .form-control textarea.has-content ~ label {
-    font-size: 15px;
-    line-height: 25px;
-  }
-
-  .form-control .label-name.active {
-    top: -20px;
-    font-size: 14px;
-    line-height: 25px;
-  }
 }
 
 @media (max-width: 991px) {
@@ -3500,20 +3723,6 @@ button.swiper-pagination-bullet {
     background: #fff;
     z-index: -1;
     pointer-events: none;
-  }
-
-  .form-control input,
-  .form-control textarea {
-    font-size: 14px;
-  }
-
-  .form-control label {
-    font-size: 14px;
-    line-height: 25px;
-  }
-
-  .search-form {
-    width: 300px;
   }
 
   .p-0 {

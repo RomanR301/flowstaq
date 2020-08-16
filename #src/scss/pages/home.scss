@@ -267,3 +267,71 @@
     }
   }
 }
+
+.steps {
+  &-container {
+    position: relative;
+    background: $darkPurpleColor;
+    padding: 120px 105px;
+    height: 700px;
+    margin-bottom: 230px;
+    @media (min-width: $breakpoint-xxl) {
+      margin-bottom: 270px;
+      padding: 145px 130px;
+      height: 900px;
+    }
+  }
+  &__heading {
+    max-width: 60%;
+    margin-bottom: 35px;
+    @media (min-width: $breakpoint-xxl) {
+      margin-bottom: 50px;
+    }
+  }
+  &__description {
+    max-width: 40%;
+  }
+  &__button {
+    background: $purpleColor;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 340px;
+    height: 210px;
+    padding: 30px 20px 15px 30px;
+    cursor: pointer;
+    @media (min-width: $breakpoint-xxl) {
+      width: 400px;
+      height: 250px;
+    }
+    & i {
+      text-align: right;
+      @include transition(.3);
+      &:before {
+        display: inline-block;
+        transform: rotate(-90deg);
+      }
+    }
+    &:hover {
+      & i {
+        transform: translate(0, 8px);
+      }
+    }
+  }
+}
+
+.contacts {
+  margin-bottom: 200px;
+  @media (min-width: $breakpoint-xxl) {
+    margin-bottom: 250px;
+  }
+  &__heading {
+    margin-bottom: 70px;
+    @media (min-width: $breakpoint-xxl) {
+      margin-bottom: 90px;
+    }
+  }
+  &__form {
+
+  }
+}

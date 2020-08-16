@@ -45,15 +45,15 @@
   line-height: 1.33;
 }
 
-.heading-3 {
-  @include fontSize(24, 42);
-  @media (min-width: $breakpoint-xxl) {
-    @include fontSize(28, 54);
-  }
-  line-height: 1.16;
-}
+// .heading-3 {
+//   @include fontSize(24, 42);
+//   @media (min-width: $breakpoint-xxl) {
+//     @include fontSize(28, 54);
+//   }
+//   line-height: 1.16;
+// }
 
-.text-33 {
+.heading-3 {
   font-size: 24px;
   line-height: 1.1;
   font-weight: 700;

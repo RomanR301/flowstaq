@@ -1,0 +1,31 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+.scroll-to-top {
+  width: 100%;
+  position: fixed;
+  bottom: 30px;
+  right: 0;
+  z-index: 99;
+  opacity: 0;
+  pointer-events: none;
+  @include transition(.3);
+  &.scrolled {
+    opacity: 1;
+    pointer-events: all;
+  }
+  & i {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    cursor: pointer;
+    @include transition(.3);
+    &:before {
+      display: inline-block;
+      transform: rotate(90deg);
+    }
+    &:hover {
+      transform: translate(0, -10px)
+    }
+  }
+}

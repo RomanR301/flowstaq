@@ -102,6 +102,17 @@ let modal = {
           let self = '#' + $(this).closest('.modal').attr('id');
           modal.closeModal(self);
       });
+        $(document).on('click', '.scroll-to-top i', function () {
+            $('body,html').animate({
+                scrollTop : 0                       // Scroll to top of body
+            }, 500);
+      });
+        $(document).on('click', '.scroll-down i', function () {
+            $('html, body').animate({
+                scrollTop: $(this).closest("section").next().offset().top - 90
+             }, "slow");
+      });
+
   }
 };
 
@@ -154,9 +165,9 @@ jQuery(function () {
 
 $(window).scroll(function () {
   if ($(this).scrollTop() > 10) {
-    $('header').addClass("scroll-header");
+    $('.scroll-to-top').addClass("scrolled");
   } else {
-  	$('header').removeClass("scroll-header");
+  	$('.scroll-to-top').removeClass("scrolled");
   }
 });
 

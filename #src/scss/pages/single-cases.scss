@@ -1,0 +1,48 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+.hero-screen__cases {
+  height: calc(100vh - 70px);
+  margin-bottom: 120px;
+  @media (min-width: $breakpoint-xxl) {
+    height: calc(100vh - 90px);
+    margin-bottom: 150px;
+  }
+  &_container {
+    position: relative;
+    width: 100%;
+  } 
+  &_image {
+    & img {
+      object-fit: cover;
+    }
+  }
+  &_content {
+    position: absolute;
+    background: $purpleColor;
+    padding: 50px 100px;
+    top: 8%;
+    left: 5%;
+    width: 90%;
+    height: 84%;
+    @media (min-width: $breakpoint-xxl) {
+      padding: 86px 140px;
+    }
+    @media (max-width: $breakpoint-lg) {
+      padding: 40px 80px;
+    }
+    @media (max-width: $breakpoint-md) {
+      padding: 30px 20px;
+    }
+  }
+  &_heading {
+    max-width: 50%;
+    @media (max-width: $breakpoint-lg) {
+      max-width: 60%;
+    }
+    @media (max-width: $breakpoint-md) {
+      max-width: 100%;
+    }
+  }
+}
+

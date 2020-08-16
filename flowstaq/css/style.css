@@ -191,8 +191,7 @@ body {
 }
 
 a {
-  color: #8041F9;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 article,
@@ -1191,6 +1190,11 @@ input[type=number] {
 .entry-content ul li,
 .entry-content ol li {
   margin-bottom: 30px;
+}
+
+.entry-content a {
+  color: #8041F9;
+  text-decoration: underline;
 }
 
 .entry-content ul li {
@@ -2623,6 +2627,11 @@ button.swiper-pagination-bullet {
   line-height: 1.05;
 }
 
+.info-block__content a {
+  color: #8041F9;
+  text-decoration: underline;
+}
+
 .tools {
   margin-bottom: 130px;
 }
@@ -2714,6 +2723,19 @@ button.swiper-pagination-bullet {
           justify-content: space-between;
   cursor: pointer;
   position: relative;
+  -webkit-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.services__item:hover {
+  background: #5C2ECE;
+}
+
+.services__item:hover .services__item_arrow i {
+  -webkit-transform: translate(8px, 0);
+      -ms-transform: translate(8px, 0);
+          transform: translate(8px, 0);
 }
 
 .services__item_icon {
@@ -2722,6 +2744,12 @@ button.swiper-pagination-bullet {
 
 .services__item_description {
   max-width: 80%;
+}
+
+.services__item_arrow i {
+  -webkit-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
 
 .services__item_arrow i:before {
@@ -3807,7 +3835,7 @@ button.swiper-pagination-bullet {
   }
 
   .hero-screen {
-    padding: 50px 0;
+    padding: 35px 0;
     margin-bottom: 70px;
     height: auto;
     min-height: calc(100vh - 70px);

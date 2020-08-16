@@ -9,7 +9,7 @@
     height: calc(100vh - 90px);
   }
   @media (max-width: $breakpoint-md) {
-    padding: 50px 0;
+    padding: 35px 0;
     margin-bottom: 70px;
     height: auto;
     min-height: calc(100vh - 70px);
@@ -80,6 +80,10 @@
       @media (min-width: $breakpoint-xxl) {
         font-size: 33px;
       }
+    }
+    & a {
+      color: $purpleColor;
+      text-decoration: underline;
     }
   }
 }
@@ -190,6 +194,13 @@
     justify-content: space-between;
     cursor: pointer;
     position: relative;
+    @include transition(.3);
+    &:hover {
+      background: $darkPurpleColor;
+      & .services__item_arrow i {
+        transform: translate(8px,0)
+      }
+    }
     &:nth-of-type(3n) {
       @media (min-width: $breakpoint-md) {
         margin-right: 0;
@@ -224,6 +235,7 @@
     }
     &_arrow {
       & i {
+        @include transition(.3);
         &:before {
           display: block;
           transform: rotate(180deg);

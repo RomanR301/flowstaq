@@ -3,14 +3,16 @@
 
 .hero-screen {
   position: relative;
-  min-height: calc(100vh - 70px);
+  height: calc(100vh - 70px);
   margin-bottom: 250px;
   @media (min-width: $breakpoint-xxl) {
-    min-height: calc(100vh - 90px);
+    height: calc(100vh - 90px);
   }
   @media (max-width: $breakpoint-md) {
     padding: 50px 0;
     margin-bottom: 70px;
+    height: auto;
+    min-height: calc(100vh - 70px);
   }
 }
 

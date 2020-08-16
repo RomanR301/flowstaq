@@ -8,12 +8,21 @@
   }
   &-logo {
     margin-bottom: 60px;
+    @media (max-width: $breakpoint-md) {
+      margin-bottom: 24px;
+    }
     & a {
       display: block;
       width: 180px;
+      @media (max-width: $breakpoint-md) {
+        width: 120px;
+      }
     }
   }
   &-google {
+    @media (max-width: $breakpoint-md) {
+      display: none;
+    }
     & a {
       width: 150px;
       display: block;
@@ -21,6 +30,12 @@
   }
   &-copyright {
     margin: -40px 150px 0 0;
+    @media (max-width: $breakpoint-lg) {
+      margin: -40px 60px 0 0;
+    }
+    @media (max-width: $breakpoint-md) {
+      margin: 0;
+    }
     &-container {
       display: flex;
       justify-content: space-between;
@@ -28,12 +43,20 @@
     & li, & a, span {
       line-height: 1.2;
       font-size: 18px;
+      color: $whiteColor;
+      text-decoration: none;
       @media (min-width: $breakpoint-xxl) {
         font-size: 22px;
+      }
+      @media (max-width: $breakpoint-md) {
+        font-size: 16px;
       }
     }
     &-text {
       margin-top: 20px;
+      @media (max-width: $breakpoint-md) {
+        margin-top: 56px;
+      }
     }
   }
 }
@@ -49,6 +72,10 @@
     @media (min-width: $breakpoint-xxl) {
       padding: 33px 20px 20px 33px;
     }
+    @media (max-width: $breakpoint-md) {
+      height: 110%;
+      padding: 16px 12px;
+    }
     span {
       font-size: 24px;
       line-height: 1.1;
@@ -57,6 +84,10 @@
       @media (min-width: $breakpoint-xxl) {
         font-size: 33px;
         margin-bottom: 50px;
+      }
+      @media (max-width: $breakpoint-md) {
+        font-size: 22px;
+        max-width: 90%;
       }
     }
     .get-pdf {

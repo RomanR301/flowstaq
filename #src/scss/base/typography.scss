@@ -54,12 +54,16 @@
 // }
 
 .heading-3 {
-  font-size: 24px;
+  @include fontSize(18,24);
   line-height: 1.1;
   font-weight: 700;
   @media (min-width: $breakpoint-xxl) {
     font-size: 33px;
   }
+  // & a {
+  //   color: $purpleColor;
+  //   text-decoration: underline;
+  // }
 }
 
 .heading-4 {

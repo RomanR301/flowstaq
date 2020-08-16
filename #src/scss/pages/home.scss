@@ -8,18 +8,10 @@
   @media (min-width: $breakpoint-xxl) {
     height: calc(100vh - 90px);
   }
-  &__arrow {
-    position: absolute;
-    top: 90%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    & i {
-      font-size: 30px;
-      &:before {
-        display: block;
-        transform: rotate(-90deg);
-      }
-    }
+  @media (max-width: $breakpoint-md) {
+    height: auto;
+    padding: 50px 0;
+    margin-bottom: 200px;
   }
 }
 
@@ -28,6 +20,9 @@
   top: 90%;
   left: 50%;
   transform: translate(-50%, -50%);
+  @media (max-width: $breakpoint-md) {
+    top: 100%;
+  }
   & i {
     display: block;
     font-size: 30px;
@@ -46,18 +41,40 @@
 }
 
 .info-block {
-  margin-bottom: 200px;
+  margin-bottom: 170px;
+  @media (min-width: $breakpoint-xxl) {
+    margin-bottom: 210px;
+  }
+  @media (max-width: $breakpoint-md) {
+    margin-bottom: 100px;
+  }
+  & .row {
+    @media(max-width: $breakpoint-md) {
+      flex-direction: column-reverse;
+    }
+  }
+
   &__heading {
     margin-bottom: 100px;
+    @media (max-width: $breakpoint-md) {
+      margin-bottom: 50px;
+    }
   }
   &__image {
 
   }
   &__content {
-    padding-left: 90px;
+    padding: 0 0 0 90px;
     max-width: 82%;
     @media (min-width: $breakpoint-xxl) {
-      padding-left: 120px;
+      padding-left: 0 0 0 120px;
+    }
+    @media (max-width: $breakpoint-lg) {
+      max-width: 100%;
+      padding-left: 0;
+    }
+    @media (max-width: $breakpoint-md) {
+      padding: 0 0 50px 0;
     }
     & p {
       font-size: 26px;
@@ -71,13 +88,25 @@
 
 .tools {
   margin-bottom: 130px;
+  @media (max-width: $breakpoint-md) {
+    margin-bottom: 40px;
+  }
   &-content {
     margin-top: -50px;
+    @media (max-width: $breakpoint-lg) {
+      margin-top: -30px;
+    }
+    @media (max-width: $breakpoint-md) {
+      margin-top: 30px;
+    }
   }
   &__title {
     margin-bottom: 20px;
     @media (min-width: $breakpoint-xxl) {
       margin-bottom: 36px;
+    }
+    @media (max-width: $breakpoint-md) {
+      display: none;
     }
   }
   &__list {
@@ -93,13 +122,22 @@
       width: 270px;
       margin-bottom: 75px;
     }
+    @media (max-width: $breakpoint-xl) {
+      width: 180px;
+    }
+    @media (max-width: $breakpoint-lg) {
+      width: 130px;
+    }
+    @media (max-width: $breakpoint-md) {
+      width: 40%;
+    }
     & img {
       display: block;
       width: 100%;
     }
   }
   &__addition {
-    font-size: 18px;
+    @include fontSize(16,18);
     line-height: 1.1;
     font-weight: 500;
     @media (min-width: $breakpoint-xxl) {
@@ -113,10 +151,16 @@
   @media (min-width: $breakpoint-xxl) {
     margin-bottom: 400px;
   }
+  @media (max-width: $breakpoint-md) {
+    margin-bottom: 100px;
+  }
   &__heading {
     margin-bottom: 90px;
     @media (min-width: $breakpoint-xxl) {
       margin-bottom: 120px;
+    }
+    @media (max-width: $breakpoint-md) {
+      margin-bottom: 24px;
     }
   }
   &-container {
@@ -127,6 +171,9 @@
     display: flex;
     flex-wrap: wrap;
     margin-left: auto;
+    @media (max-width: $breakpoint-md) {
+      justify-content: center;
+    }
   }
   &__item {
     background: $purpleColor;
@@ -138,8 +185,11 @@
     flex-direction: column;
     justify-content: space-between;
     cursor: pointer;
+    position: relative;
     &:nth-of-type(3n) {
-      margin-right: 0;
+      @media (min-width: $breakpoint-md) {
+        margin-right: 0;
+      }
     }
     @media (min-width: $breakpoint-xxl) {
       width: 31.6%;
@@ -147,14 +197,28 @@
       margin: 0 8px 34px 8px;
       min-height: 250px;
     }
+    @media (max-width: $breakpoint-xl) {
+      width: 31.6%;
+    }
+    @media (max-width: $breakpoint-md) {
+      width: 46%;
+      min-height: auto;
+      margin: 0 20px 15px 0;
+      &:nth-child(even) {
+        margin-right: 0;
+      }
+    }
     &_icon {
-      
+      margin-bottom: 16px;
     }
     &_description {
       max-width: 80%;
+      @media (max-width: $breakpoint-md) {
+        max-width: 90%;
+        margin-bottom: 16px;
+      }
     }
     &_arrow {
-      
       & i {
         &:before {
           display: block;
@@ -170,13 +234,34 @@
   @media (min-width: $breakpoint-xxl) {
     margin-bottom: 330px;
   }
+  @media (max-width: $breakpoint-md) {
+    margin-bottom: 150px;
+  }
   &__heading {
     margin-bottom: 100px;
+    @media (max-width: $breakpoint-md) {
+      margin-bottom: 50px;
+    }
   }
   &__item {
     margin: 0 150px 30px 0;
     @media (min-width: $breakpoint-xxl) {
       margin-bottom: 40px;
+    }
+    @media (max-width: $breakpoint-xl) {
+      margin: 0 100px 30px 0;
+    }
+    @media (max-width: $breakpoint-md) {
+      margin: 0 40px 30px 40px;
+    }
+    @media (max-width: $breakpoint-sm) {
+      margin: 0 15px 30px 15px;
+      &:nth-child(odd) {
+        margin-left: 0;
+      }
+      &:nth-child(even) {
+        margin-right: 0;
+      }
     }
   }
 }
@@ -186,11 +271,17 @@
   @media (min-width: $breakpoint-xxl) {
     margin-bottom: 300px;
   }
+  @media (max-width: $breakpoint-md) {
+    margin-bottom: 65px;
+  }
   &__item {
     display: block;
     position: relative;
     cursor: pointer;
     overflow: hidden;
+    @media (max-width: $breakpoint-md) {
+      margin-bottom: 15px;
+    }
     &_content {
       position: absolute;
       bottom: 24px;
@@ -198,11 +289,22 @@
       background: $purpleColor;
       width: 70%;
       padding: 30px;
+      @media (max-width: $breakpoint-md) {
+        bottom: 18px;
+        right: 18px;
+      }
     }
 
     &_description {
       max-width: 80%;
       @include transition(.3);
+      @media (max-width: $breakpoint-xl) {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+      }
     }
     &_more {
       position: absolute;
@@ -248,10 +350,22 @@
   @media (min-width: $breakpoint-xxl) {
     margin-bottom: 270px;
   }
+  @media (max-width: $breakpoint-md) {
+    margin-bottom: 40px;
+  }
   &__heading {
     margin-bottom: 60px;
     @media (min-width: $breakpoint-xxl) {
       margin-bottom: 80px;
+    }
+    @media (max-width: $breakpoint-md) {
+      margin-bottom: 10px;
+    }
+  }
+  &__subtitle {
+    @media (max-width: $breakpoint-md) {
+      width: 55%;
+      margin-left: auto;
     }
   }
   &-list {
@@ -262,6 +376,9 @@
     @media (min-width: $breakpoint-xxl) {
       margin-top: 90px;
     }
+    @media (max-width: $breakpoint-md) {
+      margin-top: 40px;
+    }
   }
   &__item {
     width: 220px;
@@ -269,6 +386,16 @@
     @media (min-width: $breakpoint-xxl) {
       width: 270px;
       margin-bottom: 75px;
+    }
+    @media (max-width: $breakpoint-xl) {
+      width: 180px;
+    }
+    @media (max-width: $breakpoint-lg) {
+      width: 130px;
+    }
+    @media (max-width: $breakpoint-md) {
+      width: 44%;
+      margin-bottom: 20px;
     }
     & img {
       display: block;
@@ -288,6 +415,11 @@
       margin-bottom: 60px;
     }
   }
+  &__subtitle {
+    @media (max-width: $breakpoint-md) {
+      margin-bottom: 25px;
+    }
+  }
 }
 
 .steps {
@@ -302,6 +434,11 @@
       padding: 145px 130px;
       height: 900px;
     }
+    @media (max-width: $breakpoint-md) {
+      height: auto;
+      padding: 15px 15px 225px 15px;
+      margin-bottom: 70px;
+    }
   }
   &__heading {
     max-width: 60%;
@@ -309,9 +446,15 @@
     @media (min-width: $breakpoint-xxl) {
       margin-bottom: 50px;
     }
+    @media (max-width: $breakpoint-lg) {
+      max-width: 100%;
+    }
   }
   &__description {
     max-width: 40%;
+    @media (max-width: $breakpoint-lg) {
+      max-width: 100%;
+    }
   }
   &__button {
     background: $purpleColor;
@@ -325,6 +468,10 @@
     @media (min-width: $breakpoint-xxl) {
       width: 400px;
       height: 250px;
+    }
+    @media (max-width: $breakpoint-md) {
+      width: 170px;
+      height: 170px;
     }
     & i {
       text-align: right;
@@ -347,13 +494,23 @@
   @media (min-width: $breakpoint-xxl) {
     margin-bottom: 250px;
   }
+  @media (max-width: $breakpoint-md) {
+    margin-bottom: 50px;
+  }
   &__heading {
     margin-bottom: 70px;
     @media (min-width: $breakpoint-xxl) {
       margin-bottom: 90px;
     }
+    @media (max-width: $breakpoint-md) {
+      margin-bottom: 50px;
+    }
   }
   &__form {
-
+    & .form-submit {
+      @media (max-width: $breakpoint-md) {
+        margin-top: -20px;
+      }
+    }
   }
 }

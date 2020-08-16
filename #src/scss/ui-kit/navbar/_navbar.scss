@@ -38,6 +38,8 @@
       padding: 20px 15px;
       font-size: 18px;
       @include transition(.3);
+      color: $whiteColor;
+      text-decoration: none;
       @media (min-width: $breakpoint-xxl) {
         padding: 26px 28px;
         font-size: 22px;

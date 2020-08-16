@@ -3,15 +3,14 @@
 
 .hero-screen {
   position: relative;
-  height: calc(100vh - 70px);
+  min-height: calc(100vh - 70px);
   margin-bottom: 250px;
   @media (min-width: $breakpoint-xxl) {
-    height: calc(100vh - 90px);
+    min-height: calc(100vh - 90px);
   }
   @media (max-width: $breakpoint-md) {
-    height: auto;
     padding: 50px 0;
-    margin-bottom: 200px;
+    margin-bottom: 70px;
   }
 }
 
@@ -20,9 +19,6 @@
   top: 90%;
   left: 50%;
   transform: translate(-50%, -50%);
-  @media (max-width: $breakpoint-md) {
-    top: 100%;
-  }
   & i {
     display: block;
     font-size: 30px;
@@ -147,12 +143,18 @@
 }
 
 .services {
-  margin-bottom: 300px;
-  @media (min-width: $breakpoint-xxl) {
-    margin-bottom: 400px;
-  }
+  margin: 100px 0 250px 0;
   @media (max-width: $breakpoint-md) {
-    margin-bottom: 100px;
+    margin: 40px 0 60px 0;
+  }
+  &.home-services {
+    margin: 0 0 300px 0;
+    @media (min-width: $breakpoint-xxl) {
+      margin: 0 0 400px 0;
+    }
+    @media (max-width: $breakpoint-md) {
+      margin: 0 0 100px 0;
+    }
   }
   &__heading {
     margin-bottom: 90px;

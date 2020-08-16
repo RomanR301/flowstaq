@@ -1,2 +1,11 @@
 @import "../abstracts/mixins";
 @import "../abstracts/variables";
+
+.cases-single {
+  & .cases__heading {
+    margin: 15px 0 90px 0;
+    @media (min-width: $breakpoint-xxl) {
+      margin: 15px 0 120px 0;
+    }
+  }
+}

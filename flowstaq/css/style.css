@@ -2923,6 +2923,10 @@ button.swiper-pagination-bullet {
   margin-bottom: 60px;
 }
 
+.cases-single .cases__heading {
+  margin: 15px 0 90px 0;
+}
+
 @media (min-width: 576px) {
   .col-sm-1 {
     -webkit-box-flex: 0;
@@ -3480,6 +3484,10 @@ button.swiper-pagination-bullet {
 
   .single-service__heading {
     margin-bottom: 80px;
+  }
+
+  .cases-single .cases__heading {
+    margin: 15px 0 120px 0;
   }
 }
 

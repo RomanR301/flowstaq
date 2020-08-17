@@ -30,6 +30,7 @@
     background: $whiteColor;
     & span {
       color: $purpleColor;
+      @include transition(.3);
     }
     & i {
       color: $purpleColor;

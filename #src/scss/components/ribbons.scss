@@ -1,0 +1,14 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+.ribbon {
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.hero-screen {
+  // background: url('../../img/ribbon-hero-screen.svg');
+  // background-repeat: no-repeat;
+  // // background-size: ;
+}

@@ -9,12 +9,12 @@
 }
 
 @function get-vh($object) {
-  $vh: (750 * 0.01) * 1px;
+  $vh: (1080 * 0.01) * 1px;
   @return ($object / $vh) * 1vh;
 }
 
 @function get-vw($object) {
-  $vw: (1110 * 0.01) * 1px;
+  $vw: (1650 * 0.01) * 1px;
   @return ($object / $vw) * 1vw;
 }
 

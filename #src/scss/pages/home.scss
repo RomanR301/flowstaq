@@ -89,7 +89,7 @@
 }
 
 .tools {
-  margin-bottom: 130px;
+  margin-bottom: 250px;
   @media (max-width: $breakpoint-md) {
     margin-bottom: 40px;
   }
@@ -311,7 +311,6 @@
         right: 18px;
       }
     }
-
     &_description {
       max-width: 80%;
       @include transition(.3);
@@ -365,6 +364,7 @@
 .clients {
   margin-bottom: 220px;
   @media (min-width: $breakpoint-xxl) {
+    // margin-bottom: 270px;
     margin-bottom: 270px;
   }
   @media (max-width: $breakpoint-md) {

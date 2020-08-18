@@ -23,6 +23,9 @@
   top: 90%;
   left: 50%;
   transform: translate(-50%, -50%);
+  @media (max-width: $breakpoint-md) {
+    top: 80%;
+  }
   & i {
     font-size: 30px;
     cursor: pointer;

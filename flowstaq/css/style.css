@@ -4113,6 +4113,10 @@ button.swiper-pagination-bullet {
     min-height: calc(100vh - 70px);
   }
 
+  .scroll-down {
+    top: 80%;
+  }
+
   .info-block {
     margin-bottom: 100px;
   }

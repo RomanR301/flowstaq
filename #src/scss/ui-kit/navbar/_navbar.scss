@@ -7,10 +7,11 @@
   @media (max-width: $breakpoint-xl) {
     position: fixed;
     width: 100%;
-    height: 100%;
     top: 70px;
     right: -200%;
-    padding: 0 15px 15px 15px;
+    padding: 0 15px 0 15px;
+    overflow-y: scroll;
+    height: calc(100% - 70px);
     &.active {
       right: 0;
     }

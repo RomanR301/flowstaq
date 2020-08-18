@@ -1,14 +1,88 @@
 @import "../abstracts/mixins";
 @import "../abstracts/variables";
 
+main {
+  overflow-x: hidden;
+}
 .ribbon {
   position: absolute;
   z-index: -1;
   pointer-events: none;
+  &-home-hero {
+    transform: scale(.7);
+    right: -15%;
+    top: -110%;
+  }
+  &-home-info-second {
+    top: -145%;
+    right: -34%;
+    transform: scale(.7);
+  }
+  &-home-info-third {
+    top: -305%;
+    left: -65%;
+    transform: scale(0.7);
+  }
 }
-
-.hero-screen {
-  // background: url('../../img/ribbon-hero-screen.svg');
-  // background-repeat: no-repeat;
-  // // background-size: ;
+// @media (max-width: $breakpoint-sm) {
+//   .ribbon {
+//     &-home-hero {
+//       right: -55%;
+//       top: -90%;
+//     }
+//   }
+// }
+@media (min-width: 1600px) {
+  .ribbon {
+    &-home-hero {
+      top: -90%;
+    }
+    &-home-info-second {
+      top: -130%;
+      right: -34%;
+      transform: scale(0.9);
+    }
+    &-home-info-third {
+      top: -277%;
+      left: -55%;
+      transform: scale(0.8)
+    }
+  }
+}
+@media (min-width: 1800px) {
+  .ribbon {
+    &-home-hero {
+      right: -6%;
+      top: -76%;
+      transform: scale(0.9);
+    }
+    &-home-info-second {
+      top: -110%;
+      right: -19%;
+      transform: scale(1);
+    }
+    &-home-info-third {
+      top: -250%;
+      transform: scale(1);
+      left: -57%;
+    }
+  }
+}
+@media (min-width: 2000px) {
+  .ribbon {
+    &-home-hero {
+      top: -62%;
+      right: -2%;
+      transform: scale(1);
+    }
+    &-home-info-second {
+      right: -15%;
+      transform: scale(1.1);
+    }
+    &-home-info-third {
+      top: -251%;
+      transform: scale(1);
+      left: -35%;
+    }
+  }
 }

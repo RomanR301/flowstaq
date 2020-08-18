@@ -1456,10 +1456,38 @@ input[type=number] {
           transform: translate(0, -10px);
 }
 
+main {
+  overflow-x: hidden;
+}
+
 .ribbon {
   position: absolute;
   z-index: -1;
   pointer-events: none;
+}
+
+.ribbon-home-hero {
+  -webkit-transform: scale(0.7);
+      -ms-transform: scale(0.7);
+          transform: scale(0.7);
+  right: -15%;
+  top: -110%;
+}
+
+.ribbon-home-info-second {
+  top: -145%;
+  right: -34%;
+  -webkit-transform: scale(0.7);
+      -ms-transform: scale(0.7);
+          transform: scale(0.7);
+}
+
+.ribbon-home-info-third {
+  top: -305%;
+  left: -65%;
+  -webkit-transform: scale(0.7);
+      -ms-transform: scale(0.7);
+          transform: scale(0.7);
 }
 
 .container {
@@ -2581,6 +2609,10 @@ button.swiper-pagination-bullet {
 
 .hero-screen {
   position: relative;
+}
+
+.hero-screen {
+  position: relative;
   height: calc(100vh - 70px);
   margin-bottom: 250px;
 }
@@ -2790,6 +2822,7 @@ button.swiper-pagination-bullet {
   position: relative;
   cursor: pointer;
   overflow: hidden;
+  margin-bottom: 20px;
 }
 
 .cases__item_content {
@@ -3348,6 +3381,28 @@ button.swiper-pagination-bullet {
   }
 }
 
+@media (min-width: 1600px) {
+  .ribbon-home-hero {
+    top: -90%;
+  }
+
+  .ribbon-home-info-second {
+    top: -130%;
+    right: -34%;
+    -webkit-transform: scale(0.9);
+        -ms-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+
+  .ribbon-home-info-third {
+    top: -277%;
+    left: -55%;
+    -webkit-transform: scale(0.8);
+        -ms-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+}
+
 @media (min-width: 1800px) {
   .heading-1 {
     font-size: 80px;
@@ -3411,6 +3466,30 @@ button.swiper-pagination-bullet {
   .form-control textarea,
   .form-control input {
     font-size: 33px;
+  }
+
+  .ribbon-home-hero {
+    right: -6%;
+    top: -76%;
+    -webkit-transform: scale(0.9);
+        -ms-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+
+  .ribbon-home-info-second {
+    top: -110%;
+    right: -19%;
+    -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+            transform: scale(1);
+  }
+
+  .ribbon-home-info-third {
+    top: -250%;
+    -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+            transform: scale(1);
+    left: -57%;
   }
 
   .body-padding {
@@ -3568,6 +3647,31 @@ button.swiper-pagination-bullet {
 
   .cases-list .cases__heading {
     margin: 15px 0 120px 0;
+  }
+}
+
+@media (min-width: 2000px) {
+  .ribbon-home-hero {
+    top: -62%;
+    right: -2%;
+    -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+            transform: scale(1);
+  }
+
+  .ribbon-home-info-second {
+    right: -15%;
+    -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+
+  .ribbon-home-info-third {
+    top: -251%;
+    -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+            transform: scale(1);
+    left: -35%;
   }
 }
 

@@ -2,12 +2,36 @@
 @import "../abstracts/variables";
 
 main {
-  overflow-x: hidden;
+  overflow: hidden;
 }
+.mribbon {
+  display: none;
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+  &.--left {
+    left: -200px;
+  }
+  &.--right {
+    right: -200px;
+    transform: rotate(180deg);
+  }
+  @media (max-width: $breakpoint-md) {
+    display: block;
+    &-contact {
+      top: 260px;
+    }
+  }
+}
+
+
 .ribbon {
   position: absolute;
   z-index: -1;
   pointer-events: none;
+  @media (max-width: $breakpoint-md) {
+    display: none;
+  }
   &-home-hero {
     transform: scale(.7);
     right: -15%;
@@ -23,66 +47,142 @@ main {
     left: -65%;
     transform: scale(0.7);
   }
+  &-home-clients {
+    transform: scale(.7);
+    top: -106%;
+    right: -40%;
+  }
+  &-home-contact {
+    left: -33%;
+    top: -262%;
+    transform: scale(0.8);
+  }
 }
-// @media (max-width: $breakpoint-sm) {
-//   .ribbon {
-//     &-home-hero {
-//       right: -55%;
-//       top: -90%;
-//     }
-//   }
-// }
+@media (max-width: $breakpoint-xl) {
+  .ribbon {
+    &-home {
+      &-hero {
+        top: -110%;
+        right: -25%;
+      }
+      &-info-second {
+        right: -60%;
+        top: -170%;
+      }
+      &-info-third {
+        top: -455%;
+        left: -115%;
+      }
+      &-clients {
+        top: -146%;
+        right: -60%;
+      }
+      &-contact {
+        left: -93%;
+        top: -302%;
+      }
+    }
+  }
+}
+@media (max-width: $breakpoint-lg) {
+  .ribbon {
+    &-home {
+      &-info-second {
+        right: -80%;
+        top: -210%;
+      }
+      &-info-third {
+        top: -525%;
+        left: -185%;
+      }
+    }
+  }
+}
 @media (min-width: 1600px) {
   .ribbon {
-    &-home-hero {
-      top: -90%;
-    }
-    &-home-info-second {
-      top: -130%;
-      right: -34%;
-      transform: scale(0.9);
-    }
-    &-home-info-third {
-      top: -277%;
-      left: -55%;
-      transform: scale(0.8)
+    // home
+    &-home {
+      &-hero {
+        top: -90%;
+      }
+      &-info-second {
+        top: -130%;
+        right: -34%;
+        transform: scale(0.9);
+      }
+      &-info-third {
+        top: -277%;
+        left: -55%;
+        transform: scale(0.8)
+      }
+      &-clients {
+        top: -102%;
+        right: -35%;
+        transform: scale(0.8);
+      }
+      &-contact {
+        left: -24%;
+      }
     }
   }
 }
 @media (min-width: 1800px) {
   .ribbon {
-    &-home-hero {
-      right: -6%;
-      top: -76%;
-      transform: scale(0.9);
-    }
-    &-home-info-second {
-      top: -110%;
-      right: -19%;
-      transform: scale(1);
-    }
-    &-home-info-third {
-      top: -250%;
-      transform: scale(1);
-      left: -57%;
+    // home
+    &-home {
+      &-hero {
+        right: -6%;
+        top: -76%;
+        transform: scale(0.9);
+      }
+      &-info-second {
+        top: -110%;
+        right: -19%;
+        transform: scale(1);
+      }
+      &-info-third {
+        top: -250%;
+        transform: scale(1);
+        left: -57%;
+      }
+      &-clients {
+        top: -58%;
+        right: -37%;
+        transform: scale(1);
+      }
+      &-contact {
+        top: -196%;
+        left: -19%;
+        transform: scale(1);
+      }
     }
   }
 }
 @media (min-width: 2000px) {
   .ribbon {
-    &-home-hero {
-      top: -62%;
-      right: -2%;
-      transform: scale(1);
-    }
-    &-home-info-second {
-      right: -15%;
-      transform: scale(1.1);
-    }
-    &-home-info-third {
-      top: -251%;
-      transform: scale(1);
-      left: -35%;
+    // home
+    &-home {
+      &-hero {
+        top: -62%;
+        right: -2%;
+        transform: scale(1);
+      }
+      &-info-second {
+        right: -15%;
+        transform: scale(1.1);
+      }
+      &-info-third {
+        top: -251%;
+        transform: scale(1);
+        left: -35%;
+      }
+      &-clients {
+        right: -22%;
+      }
+      &-contact {
+        top: -196%;
+        left: -5%;
+      }
     }
   }
 }

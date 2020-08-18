@@ -97,15 +97,34 @@
   }
 }
 
-.icon-arrow:before {
+// .icon-icon-arrow {
+//   transform: rotate(90deg);
+// }
+.icon-icon-arrow:before {
   content: "\e900";
+  color: #fff;
 }
-
-.icon-search {
-  display: block;
-  background: url('../img/icons/icon-search.svg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 25px;
-  height: 25px;
+.icon-icon-bing:before {
+  content: "\e901";
+  color: #fff;
+}
+.icon-icon-cart:before {
+  content: "\e902";
+  color: #fff;
+}
+.icon-icon-four-sides:before {
+  content: "\e903";
+  color: #fff;
+}
+.icon-icon-lines:before {
+  content: "\e904";
+  color: #fff;
+}
+.icon-icon-people:before {
+  content: "\e905";
+  color: #fff;
+}
+.icon-icon-search:before {
+  content: "\e906";
+  color: #fff;
 }

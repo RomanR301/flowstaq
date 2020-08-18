@@ -24,16 +24,12 @@
   left: 50%;
   transform: translate(-50%, -50%);
   & i {
-    display: block;
     font-size: 30px;
     cursor: pointer;
     width: 50px;
     height: 50px;
     @include transition(.3);
-    &:before {
-      display: block;
-      transform: rotate(-90deg);
-    }
+
     &:hover {
       transform: translate(0, 8px);
     }
@@ -191,9 +187,9 @@
     width: 32%;
     margin: 0 6px 26px 6px;
     min-height: 200px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: space-between;
     cursor: pointer;
     position: relative;
     @include transition(.3);
@@ -227,6 +223,10 @@
     }
     &_icon {
       margin-bottom: 16px;
+      font-size: 30px;
+      @media (max-width: $breakpoint-md) {
+        font-size: 22px;
+      }
     }
     &_description {
       max-width: 80%;
@@ -236,11 +236,15 @@
       }
     }
     &_arrow {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
       & i {
+        display: block;
         @include transition(.3);
         &:before {
           display: block;
-          transform: rotate(180deg);
+          transform: rotate(-90deg);
         }
       }
     }
@@ -332,10 +336,15 @@
       @include transition(.3);
     }
     &_arrow {
+      display: flex;
+      justify-content: flex-end;
+      position: absolute;
+      right: 20px;
+      bottom: 10px;
       & i {
         &:before {
-          display: block;
-          transform: rotate(180deg);
+          display: inline-block;
+          transform: rotate(-90deg);
         }
       }
     }
@@ -496,10 +505,6 @@
     & i {
       text-align: right;
       @include transition(.3);
-      &:before {
-        display: inline-block;
-        transform: rotate(-90deg);
-      }
     }
     &:hover {
       & i {

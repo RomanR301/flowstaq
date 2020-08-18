@@ -8,9 +8,11 @@
   display: flex;
   align-items: center;
   cursor: pointer;
+  @include transition(.3);
   & span {
     font-size: 12px;
     max-width: 80%;
+    @include transition(.3);
     @media (min-width: $breakpoint-xxl) {
       font-size: 14px;
     }
@@ -21,10 +23,6 @@
     align-items: center;
     justify-content: center;
     @include transition(.3);
-    &:before {
-      display: block;
-      transform: rotate(-90deg);
-    }
   }
   &-white {
     background: $whiteColor;
@@ -32,12 +30,24 @@
       color: $purpleColor;
       @include transition(.3);
     }
-    & i {
+    & i:before {
       color: $purpleColor;
+    }
+    &:hover {
+      background: $darkPurpleColor;
+      & span {
+        color: $whiteColor;
+      }
+      & i:before {
+        color: $whiteColor;
+      }
     }
   }
   &-purple {
     background: $purpleColor;
+    &:hover {
+      background: $darkPurpleColor;
+    }
   }
 }
 
@@ -83,7 +93,11 @@
         font-weight: 700;
       }
       & i {
-        height: 100%;
+        position: absolute;
+        right: 20px;
+        bottom: 15px;
+        height: auto;
+        width: unset;
         align-items: flex-end;
       }
     }

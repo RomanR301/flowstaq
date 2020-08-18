@@ -18,11 +18,13 @@
     width: 40px;
     height: 40px;
     display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
     @include transition(.3);
     &:before {
       display: inline-block;
-      transform: rotate(90deg);
+      transform: rotate(180deg);
     }
     &:hover {
       transform: translate(0, -10px)

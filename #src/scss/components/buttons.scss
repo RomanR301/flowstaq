@@ -34,20 +34,20 @@
       color: $purpleColor;
     }
     &:hover {
-      background: $darkPurpleColor;
-      & span {
-        color: $whiteColor;
-      }
-      & i:before {
-        color: $whiteColor;
-      }
+      // background: $darkPurpleColor;
+      // & span {
+      //   color: $whiteColor;
+      // }
+      // & i:before {
+      //   color: $whiteColor;
+      // }
     }
   }
   &-purple {
     background: $purpleColor;
-    &:hover {
-      background: $darkPurpleColor;
-    }
+    // &:hover {
+    //   background: $darkPurpleColor;
+    // }
   }
 }
 

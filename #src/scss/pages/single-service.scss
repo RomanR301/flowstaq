@@ -15,8 +15,10 @@
   &__icon {
     margin-bottom: 30px;
     & i {
-      width: 70px;
-      height: 70px;
+      font-size: 70px;
+      @media (max-width: $breakpoint-md) {
+        font-size: 35px;
+      }
     }
   }
   &__heading {

@@ -22,6 +22,12 @@ body.active {
   overflow: hidden;
 }
 
+.footer-inside {
+  .footer {
+    margin-top: 100px;
+  }
+}
+
 // a {
 //   color: $purpleColor;
 //   border-bottom: 1px solid $purpleColor;

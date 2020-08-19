@@ -190,12 +190,12 @@
     width: 32%;
     margin: 0 6px 26px 6px;
     min-height: 200px;
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: space-between;
     cursor: pointer;
     position: relative;
     @include transition(.3);
+    @media (max-width: $breakpoint-md) {
+      padding: 14px;
+    }
     &:hover {
       background: $darkPurpleColor;
       & .services__item_arrow i {
@@ -228,7 +228,8 @@
       margin-bottom: 16px;
       font-size: 30px;
       @media (max-width: $breakpoint-md) {
-        font-size: 22px;
+        font-size: 20px;
+        margin-bottom: 10px;
       }
     }
     &_description {
@@ -237,11 +238,18 @@
         max-width: 90%;
         margin-bottom: 16px;
       }
+      @media (max-width: 400px) {
+        max-width: 100%;
+      }
     }
     &_arrow {
       position: absolute;
       bottom: 20px;
       right: 20px;
+      @media (max-width: $breakpoint-md) {
+        right: 15px;
+        bottom: 15px;
+      }
       & i {
         display: block;
         @include transition(.3);

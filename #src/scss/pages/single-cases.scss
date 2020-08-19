@@ -46,3 +46,46 @@
   }
 }
 
+.single-case {
+  & .page-content {
+    & img {
+      margin-bottom: 95px;
+    }
+  }
+}
+
+.testimonial {
+  margin: 250px 0 160px 0;
+  @media (max-width: $breakpoint-lg) {
+    margin: 150px 0 130px 0;
+  }
+  @media (max-width: $breakpoint-md) {
+    margin: 20px 0 20px 0;
+  }
+  &__heading {
+    max-width: 65%;
+  }
+  &__content {
+    margin: 110px 0;
+    position: relative;
+    @media (min-width: $breakpoint-xxl) {
+      margin: 135px 0;
+    }
+    &:before, &:after {
+      content: '';
+      position: absolute;
+      background: url('../../img/icon-quote.svg');
+      background-repeat: no-repeat;
+      background-size: 100%;
+      width: 40px;
+      height: 40px;
+      left: 0;
+    }
+    &:before {
+      top: -60px;
+    }
+    &:after {
+      bottom: -60px;
+    }
+  }
+}

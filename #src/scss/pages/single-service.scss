@@ -8,10 +8,6 @@
 }
 
 .single-service {
-  margin-bottom: 120px;
-  @media (min-width: $breakpoint-xxl) {
-    margin-bottom: 150px;
-  }
   &__icon {
     margin-bottom: 30px;
     & i {
@@ -19,15 +15,6 @@
       @media (max-width: $breakpoint-md) {
         font-size: 35px;
       }
-    }
-  }
-  &__heading {
-    margin-bottom: 60px;
-    @media (min-width: $breakpoint-xxl) {
-      margin-bottom: 80px;
-    }
-    @media (max-width: $breakpoint-md) {
-      margin-bottom: 20px;
     }
   }
 }

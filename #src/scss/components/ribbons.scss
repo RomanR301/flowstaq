@@ -65,10 +65,10 @@ main {
       left: -54%;
     }
   }
-  &-cases {
-    &-hero {
-      
-    }
+  &-testimonial {
+    top: -228%;
+    right: 260px;
+    transform: scale(.8);
   }
 }
 @media (max-width: $breakpoint-xl) {
@@ -102,6 +102,10 @@ main {
         right: -40px;
       }
     }
+    &-testimonial {
+      top: -1399px;
+      right: 160px;
+    }
   }
 }
 @media (max-width: $breakpoint-lg) {
@@ -115,6 +119,9 @@ main {
         top: -525%;
         left: -185%;
       }
+    }
+    &-testimonial {
+      right: 100px;
     }
   }
 }
@@ -188,6 +195,10 @@ main {
         left: -22%;
       }
     }
+    &-testimonial {
+      top: -132%;
+      right: 350px;
+    }
   }
 }
 @media (min-width: 2000px) {
@@ -221,6 +232,9 @@ main {
         top: -58%;
         left: -250px;
       }
+    }
+    &-testimonial {
+      right: 420px;
     }
   }
 }

@@ -33,8 +33,71 @@
 }
 
 .page-content {
-  margin-top: 100px;
+  margin: 100px 0 0 0;
   @media (max-width: $breakpoint-md) {
-    margin-top: 30px;
+    margin: 20px 0 0 0;
+  }
+  &__container {
+    margin: 0 0 120px 0;
+    @media (min-width: $breakpoint-xxl) {
+      margin: 0 0 150px 0;
+    }
+    @media (max-width: $breakpoint-md) {
+      margin: 0 0 70px 0;
+    }
+    // single case
+    &_modified {
+      margin-top: 250px;
+      position: relative;
+      &:before {
+        content: '';
+        background: url(../../img/icon-percentage.svg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        width: 400px;
+        height: 430px;
+        position: absolute;
+        top: calc(50% - 215px);
+        right: 5%;
+        z-index: -1;
+        @media (max-width: $breakpoint-md) {
+          right: -30%;
+        }
+      }
+      @media (min-width: $breakpoint-xxl) {
+        margin-top: 320px;
+      }
+      @media (max-width: $breakpoint-lg) {
+        margin-top: 0px;
+      }
+    }
+  }
+  &__title {
+    margin: 0 0 60px 0;
+    @media (min-width: $breakpoint-xxl) {
+      margin-bottom: 80px;
+    }
+    @media (max-width: $breakpoint-md) {
+      margin-bottom: 20px;
+    }
+  }
+  // single case
+  &__item {
+    margin-bottom: 140px;
+    @media (min-width: $breakpoint-xxl) {
+      margin-bottom: 180px;
+    }
+    @media (max-width: $breakpoint-lg) {
+      margin-bottom: 80px;
+    }
+    @media (max-width: $breakpoint-md) {
+      margin-bottom: 60px;
+    }
+    & .page-content {
+      margin: 40px 0 0 0;
+      @media (max-width: $breakpoint-lg) {
+        margin: 0;
+      }
+    }
   }
 }

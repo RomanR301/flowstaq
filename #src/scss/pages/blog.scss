@@ -1,3 +1,8 @@
 @import "../abstracts/mixins";
 @import "../abstracts/variables";
 
+.blog-select__container {
+  @media (max-width: $breakpoint-md) {
+    justify-content: space-between;
+  }
+}

@@ -94,7 +94,7 @@
     &:before {
       content: '';
       position: absolute;
-      background: url(../../img/ribbon-quote.svg);
+      background: url(../img/ribbon-quote.svg);
       background-repeat: no-repeat;
       background-size: 100%;
       z-index: -1;
@@ -114,7 +114,7 @@
     &:after {
       display: none;
       position: absolute;
-      background: url(../../img/ribbon-mobile.svg);
+      background: url(../img/ribbon-mobile.svg);
       background-repeat: no-repeat;
       background-size: 100%;
       transform: rotate(180deg);

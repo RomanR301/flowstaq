@@ -56,6 +56,12 @@ let front = {
       $(document).on('click', '.hamburger', function () {
           self.toggleNav();
       });
+
+      $('.team__item_content').hover(function(event){
+        $(this).find('.team__item_text').slideToggle(300, function(){
+        });
+        event.preventDefault();
+      });
   }
 };
 
@@ -193,6 +199,8 @@ $(function () {
     })
 });
 
+
+
 // CUSTOM SELECT
 var x, i, j, l, ll, selElmnt, a, b, c;
 /*look for any elements with the class "custom-select":*/
@@ -204,6 +212,7 @@ for (i = 0; i < l; i++) {
   /*for each element, create a new DIV that will act as the selected item:*/
   a = document.createElement("DIV");
   a.setAttribute("class", "select-selected");
+  a.setAttribute("id", "idselect");
   a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
   x[i].appendChild(a);
   /*for each element, create a new DIV that will contain the option list:*/
@@ -218,12 +227,17 @@ for (i = 0; i < l; i++) {
         /*when an item is clicked, update the original select box,
         and the selected item:*/
         var y, i, k, s, h, sl, yl;
+
+        myFunction($(this).text());
+
         s = this.parentNode.parentNode.getElementsByTagName("select")[0];
         sl = s.length;
         h = this.parentNode.previousSibling;
         for (i = 0; i < sl; i++) {
           if (s.options[i].innerHTML == this.innerHTML) {
             s.selectedIndex = i;
+            // console.log($(this).text());
+
             h.innerHTML = this.innerHTML;
             y = this.parentNode.getElementsByClassName("same-as-selected");
             yl = y.length;
@@ -273,136 +287,15 @@ function closeAllSelect(elmnt) {
 then close all select boxes:*/
 document.addEventListener("click", closeAllSelect);
 
-// document.getElementById("uploadBtn").onchange = function () {
-// document.getElementById("uploadFile").value = this.value.replace("C:\\fakepath\\", "");
-// };
 
+function myFunction(a){
+  $('#inputselect').attr('value', a);
+}
 
-
-//   $(document).ready(function () {
-//       $(document).on('click', '.anchor-link', function () {
-//           if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-//               let target = $(this.hash);
-//               target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-//               if (target.length) {
-//                   $('html,body').animate({
-//                       scrollTop: (target.offset().top) - $('.header').outerHeight()
-//                   }, 1000);
-//                   return false;
-//               }
-//           }
-//       });
-//     });
-    // document.addEventListener("DOMContentLoaded", function (event) {
-
-    //     let childrenItem = document.querySelectorAll('.menu-item-has-children > a');
-    //     for (let i = 0; i < childrenItem.length; i++) {
-    //         var btn = document.createElement("BUTTON");   // Create a <button> element
-    //         btn.className = "nav-btn";                    // add class
-    //         // btn.innerHTML = `<i class="icon-icon-arrow"></i>`;
-    //         childrenItem[i].appendChild(btn);
-    //     }
-    // });
-    
-    // $(document).on('click', '.nav-btn', function (e) {
-    //     e.preventDefault();
-    //     var navTitle = document.createElement("p");
-    //     navTitle.className = "nav-title";        
-    //     navTitle.innerHTML = '<i class="icon-icon-arrow"></i>' + $(this).parent().text();
-    //     $(this).parent().parent().find('.sub-menu').prepend(navTitle);
-    //     if (!$(this).parent().parent().find('.sub-menu').hasClass('menuOpen')) {
-    //         $(this).parent().parent().find('.sub-menu').addClass('menuOpen');
-    //     } else {
-    //         $(this).parent().parent().find('.sub-menu').removeClass("menuOpen");
-    //     }
-    // });
-    
-    // $(document).on('click', '.nav-title', function (e) {
-    //     e.preventDefault();
-    //     if ($(this).parent().hasClass('menuOpen')) {
-    //         $(this).parent().removeClass("menuOpen");
-    //         $(this).remove();
-    //     }
-    // });
-    // document.addEventListener("DOMContentLoaded", function (event) {
-
-    //     let childrenItem = document.querySelectorAll('.menu > .menu-item-has-children > a');
-    //     for (let i = 0; i < childrenItem.length; i++) {
-    //         var btn = document.createElement("BUTTON");   // Create a <button> element
-    //         btn.className = "nav-btn";                    // add class
-    //         btn.innerHTML = `<i class="icon-arrow-big"></i>`;
-    //         childrenItem[i].appendChild(btn);
-    //     }
-    // });
-    
-    // $(document).on('click', '.nav-btn', function (e) {
-    //     e.preventDefault();
-    //     var navTitle = document.createElement("p");
-    //     var navBack = document.createElement("span");
-    //     navTitle.className = "nav-title";        
-    //     navBack.className = "prev-page"
-    //     navBack.innerHTML = '<i class="icon-arrow-big"></i>Назад';
-    //     navTitle.innerHTML = $(this).parent().text();
-    //     $(this).parent().next().prepend(navBack);
-    //     $(this).parent().next('.sub-menu').prepend(navTitle);
-    //     if (!$(this).parent().next('.sub-menu').hasClass('menuOpen')) {
-    //         $(this).parent().next('.sub-menu').addClass('menuOpen');
-    //         $(this).parent().parent().addClass('show');
-    //     } else {
-    //         $(this).parent().next('.sub-menu').removeClass("menuOpen");
-    //     }
-    // });
-    
-    
-    // $(document).on('click', '.prev-page', function (e) {
-    //     e.preventDefault();
-    //     if ($(this).parent().hasClass('menuOpen')) {
-    //         $(this).parent().removeClass("menuOpen");
-    //         $(this).parent().find('p').remove();
-    //         $(this).parent().find('span').remove();
-    //         $(this).parent().parent().removeClass('show');
-    //     }
-    // });
-// ScrollSpy
-
-//     const highlightScroll = () => {
-//       const scrollPos =  window.pageYOffset + 100
-//       const links = document.querySelectorAll('.header-nav a')
-      
-//       links.forEach((link, index) => {
-//           const sections = document.querySelectorAll('section')
-//           const activeSection = sections[index]
-//           const compare = activeSection.offsetTop <= scrollPos && (activeSection.offsetTop + activeSection.offsetHeight > scrollPos)  
-          
-//           if(scrollPos > 100) {
-//               compare ? link.classList.add('active') : link.classList.remove('active')  
-//           }
-          
-//       })
-//   }
-//   window.addEventListener('scroll', highlightScroll)
-    
-// $(function () {
-//     $('.form-input, .form-textarea')
-//         .on('focusin', function(){
-//         $(this).parent().find('.label-name').addClass('active');
-//     })
-//         .on('focusout', function(){
-//           $(this).parent().find('.label-name').removeClass('active');
-//     })
-//     $(".form-control input, .form-control textarea").focusout(function() {
-//         let $this = $(this);
-//         let $label = $this.parent().find('.label-name')
-
-//         if ($this.val() != "") {
-//             $this.addClass("has-content");
-//             $label.addClass("active");
-//         }
-//         else {
-//             $this.removeClass("has-content");
-//             $label.removeClass("active");
-//         }
-
-//     })
-// });
+$(document).ready(function(){
+  $('.select-items div').on('click', function(){
+    // alert($(inputselect).val())
+    // закоментував щоб не мішало, прихував інпут і селект стилями
+  })
+})
 

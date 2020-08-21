@@ -16,6 +16,9 @@ main {
     right: -200px;
     transform: rotate(180deg);
   }
+  &.--modified {
+    bottom: 100px;
+  }
   @media (max-width: $breakpoint-md) {
     display: block;
     &-contact {
@@ -69,6 +72,18 @@ main {
     top: -228%;
     right: 260px;
     transform: scale(.8);
+  }
+  &-team {
+    &-hero {
+      transform: scale(0.8);
+      top: -890px;
+      right: -290px;
+    }
+    &-bottom {
+      transform: scale(.8);
+      bottom: -1000px;
+      left: -610px;
+    }
   }
 }
 @media (max-width: $breakpoint-xl) {
@@ -198,6 +213,16 @@ main {
     &-testimonial {
       top: -132%;
       right: 350px;
+    }
+    &-team {
+      &-hero {
+        transform: scale(1);
+        top: -580px;
+        right: -70px;
+      }
+    }
+    &-bottom {
+      transform: scale(1);
     }
   }
 }

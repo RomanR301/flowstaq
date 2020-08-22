@@ -2932,6 +2932,16 @@ main {
     right: -200%;
     overflow-y: scroll;
     height: calc(100% - 70px);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 
   .navbar.active {
@@ -2946,6 +2956,7 @@ main {
         -ms-flex-pack: center;
             justify-content: center;
     padding: 0 15px;
+    margin: 0 0 40px 0;
   }
 
   .navbar .cta-buttons .cta:last-child {

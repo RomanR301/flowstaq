@@ -9,9 +9,11 @@
     width: 100%;
     top: 70px;
     right: -200%;
-    // padding: 0 15px 0 15px;
     overflow-y: scroll;
     height: calc(100% - 70px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     &.active {
       right: 0;
     }
@@ -22,6 +24,7 @@
       display: flex;
       justify-content: center;
       padding: 0 15px;
+      margin: 0 0 40px 0;
       & .cta:last-child {
         margin-right: 3px;
       }

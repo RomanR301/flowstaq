@@ -56,12 +56,21 @@ let front = {
       $(document).on('click', '.hamburger', function () {
           self.toggleNav();
       });
-
-      $('.team__item_content').hover(function(event){
-        $(this).find('.team__item_text').slideToggle(300, function(){
+      if($(window).width() < 767) {
+        $('.team__item_content').click(function(){
+          let $this = $(this);
+          $(this).find('.team__item_text').slideToggle(300, function(){
+            
+          });
+          $(this).toggleClass('opened');
         });
-        event.preventDefault();
-      });
+      } else {
+        $('.team__item_content').hover(function(event){
+          $(this).find('.team__item_text').stop().slideToggle(300);
+        });
+      }
+
+      
   }
 };
 

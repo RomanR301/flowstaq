@@ -19,6 +19,11 @@ main {
   &.--modified {
     bottom: 100px;
   }
+  &.--navbar {
+    height: 100%;
+    display: block;
+    left: -120px;
+  }
   @media (max-width: $breakpoint-md) {
     display: block;
     &-contact {
@@ -28,6 +33,8 @@ main {
 }
 
 
+
+
 .ribbon {
   position: absolute;
   z-index: -1;
@@ -35,231 +42,154 @@ main {
   @media (max-width: $breakpoint-md) {
     display: none;
   }
+  transform: scale(.8);
   &-home {
     &-hero {
-      transform: scale(.7);
-      right: -15%;
-      top: -110%;
+      right: -130px;
+      top: -710px;
     }
     &-info-second {
-      top: -145%;
-      right: -34%;
-      transform: scale(.7);
+      top: -880px;
+      right: -480px;
     }
     &-info-third {
-      top: -305%;
-      left: -65%;
-      transform: scale(0.7);
+      top: -1850px;
+      left: -1040px;
     }
     &-clients {
-      transform: scale(.7);
-      top: -106%;
-      right: -40%;
+      top: -770px;
+      right: -570px;
     }
     &-contact {
-      left: -33%;
-      top: -262%;
-      transform: scale(0.8);
+      right: -40px;
+      top: -1340px;
     }
   }
   &-services {
     &-hero {
-      top: -109%;
-      left: -54%;
+      right: -240px;
+      top: -810px;
     }
   }
   &-testimonial {
-    top: -228%;
+    top: -1520px;
     right: 260px;
-    transform: scale(.8);
   }
   &-team {
     &-hero {
-      transform: scale(0.8);
       top: -890px;
       right: -290px;
     }
     &-bottom {
-      transform: scale(.8);
       bottom: -1000px;
       left: -610px;
+    }
+  }
+  &-calendar {
+    top: -1140px;
+    left: 60px;
+  }
+}
+@media (max-width: $breakpoint-lg) {
+  .ribbon {
+    &-testimonial {
+      right: 100px;
     }
   }
 }
 @media (max-width: $breakpoint-xl) {
   .ribbon {
-    &-home {
-      &-hero {
-        top: -110%;
-        right: -25%;
-      }
-      &-info-second {
-        right: -60%;
-        top: -170%;
-      }
-      &-info-third {
-        top: -455%;
-        left: -115%;
-      }
-      &-clients {
-        top: -146%;
-        right: -60%;
-      }
-      &-contact {
-        left: -93%;
-        top: -302%;
-      }
-    }
-    &-services {
-      &-hero {
-        top: -109%;
-        left: unset;  
-        right: -40px;
-      }
-    }
     &-testimonial {
       top: -1399px;
       right: 160px;
     }
   }
 }
-@media (max-width: $breakpoint-lg) {
-  .ribbon {
-    &-home {
-      &-info-second {
-        right: -80%;
-        top: -210%;
-      }
-      &-info-third {
-        top: -525%;
-        left: -185%;
-      }
-    }
-    &-testimonial {
-      right: 100px;
-    }
-  }
-}
+
 @media (min-width: 1600px) {
   .ribbon {
-    // home
     &-home {
-      &-hero {
-        top: -90%;
-      }
-      &-info-second {
-        top: -130%;
-        right: -34%;
-        transform: scale(0.9);
-      }
       &-info-third {
-        top: -277%;
-        left: -55%;
-        transform: scale(0.8)
+        top: -1780px;
+        left: -910px;
       }
-      &-clients {
-        top: -102%;
-        right: -35%;
-        transform: scale(0.8);
-      }
-      &-contact {
-        left: -24%;
-      }
-    }
-    &-services {
-      &-hero {
-        top: -98%;
-        left: -38%;
+      &-contact { 
+        right: 30px;
+        top: -1370px;
       }
     }
   }
 }
 @media (min-width: 1800px) {
   .ribbon {
-    // home
+    transform: scale(1);
     &-home {
       &-hero {
-        right: -6%;
-        top: -76%;
-        transform: scale(0.9);
-      }
-      &-info-second {
-        top: -110%;
-        right: -19%;
-        transform: scale(1);
+        right: -60px;
       }
       &-info-third {
-        top: -250%;
-        transform: scale(1);
-        left: -57%;
+        left: -990px;
+        top: -1790px;
       }
       &-clients {
-        top: -58%;
-        right: -37%;
-        transform: scale(1);
+        top: -530px;
+        right: -500px;
       }
       &-contact {
-        top: -196%;
-        left: -19%;
-        transform: scale(1);
+        right: 210px;
+        top: -1280px;
       }
     }
     &-services {
       &-hero {
-        top: -88%;
-        left: -22%;
+        right: -20px;
+        top: -670px;
       }
     }
     &-testimonial {
-      top: -132%;
-      right: 350px;
+      right: 540px;
+      top: -1400px;
     }
     &-team {
       &-hero {
-        transform: scale(1);
         top: -580px;
         right: -70px;
       }
     }
-    &-bottom {
-      transform: scale(1);
+    &-calendar {
+      left: 310px;
+      top: -1000px;
     }
   }
 }
 @media (min-width: 2000px) {
   .ribbon {
-    // home
     &-home {
-      &-hero {
-        top: -62%;
-        right: -2%;
-        transform: scale(1);
-      }
       &-info-second {
-        right: -15%;
-        transform: scale(1.1);
+        top: -840px;
+        right: -310px;
       }
       &-info-third {
-        top: -251%;
-        transform: scale(1);
-        left: -35%;
-      }
-      &-clients {
-        right: -22%;
+        left: -870px;
       }
       &-contact {
-        top: -196%;
-        left: -12%;
+        right: 450px;
+        top: -1290px;
       }
     }
     &-services {
       &-hero {
-        top: -58%;
-        left: -250px;
+        right: 90px;
+        top: -600px;
       }
     }
     &-testimonial {
-      right: 420px;
+      right: 730px;
+      top: -1390px;
+    }
+    &-calendar {
+      left: 510px;
+      top: -970px;
     }
   }
 }

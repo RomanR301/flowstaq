@@ -33,21 +33,9 @@
     & i:before {
       color: $purpleColor;
     }
-    &:hover {
-      // background: $darkPurpleColor;
-      // & span {
-      //   color: $whiteColor;
-      // }
-      // & i:before {
-      //   color: $whiteColor;
-      // }
-    }
   }
   &-purple {
     background: $purpleColor;
-    // &:hover {
-    //   background: $darkPurpleColor;
-    // }
   }
 }
 
@@ -83,7 +71,7 @@
     flex-direction: row-reverse;
     justify-content: center;
     & .cta {
-      height: 180px;
+      height: 100%;
       align-items: flex-start;
       width: 49.5%;
       & span {

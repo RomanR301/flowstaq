@@ -76,8 +76,6 @@
       left: 400px;
       width: 480px;
       min-height: 200px;
-      // overflow: hidden;
-      // max-height: 200px;
       @media (min-width: $breakpoint-xxl) {
         padding: 33px;
       }
@@ -92,14 +90,22 @@
         padding: 25px 25px 40px 25px;
       }
       &:hover {
-        // & .team__item_content {
-          // max-height: 1000px;
-        // }
-        & .team__item_text {
-          // height: auto;
-          // transform: translate(0,0);
-          
+        @media (min-width: $breakpoint-md) {
+          & .team__item_arrow {
+            &:before {
+              opacity: 0;
+              visibility: hidden;
+              right: 10px;
+            }
+            &:after {
+              opacity: 1;
+              visibility: visible;
+              transform: translate(0, 0);
+            }
+          }
         }
+      }
+      &.opened {
         & .team__item_arrow {
           &:before {
             opacity: 0;
@@ -131,10 +137,6 @@
     &_text {
       line-height: 1.1;
       display: none;
-      // display: none;
-      // transform: translate(0, 210px);
-      // height: 0;
-      // @include transition(.3);
     }
     &_arrow {
       &:before, &:after {

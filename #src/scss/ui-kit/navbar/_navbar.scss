@@ -20,16 +20,24 @@
     display: none;
     @media (max-width: $breakpoint-xl) {
       display: flex;
+      justify-content: center;
       padding: 0 15px;
       & .cta:last-child {
         margin-right: 3px;
       }
+    }
+    @media (max-width: $breakpoint-md) {
+      height: 180px;
     }
   }
 }
 .menu {
   @media (max-width: $breakpoint-xl) {
     flex-direction: column;
+    align-items: center;
+  }
+  @media (max-width: $breakpoint-sm) {
+    align-items: flex-start;
   }
   &-item {
     & a {
@@ -72,23 +80,23 @@
     @include transition(.3);
   }
   & span:nth-child(1) {
-    top: calc(50% - 7.5px);
+    top: calc(50% - 8.5px);
   }
   & span:nth-child(2) {
-    top: calc(50% - 1.5px);
+    top: calc(50% - 2.5px);
   }
   & span:nth-child(3) {
-    top: calc(50% - 1.5px);
+    top: calc(50% - 2.5px);
   }
   & span:nth-child(4) {
-    top: calc(50% + 5.5px);
+    top: calc(50% + 3.5px);
   }
   &.open {
     & span {
       background: $purpleColor;
     }
     & span:nth-child(1) {
-      top: calc(50% - 1.5px);
+      top: calc(50% - 2.5px);
       width: 0%;
       right: 50%;
     }
@@ -99,7 +107,7 @@
       transform: rotate(-45deg);
     }
     & span:nth-child(4) {
-      top: calc(50% - 1.5px);
+      top: calc(50% - 2.5px);
       width: 0;
       right: 50%;
     }

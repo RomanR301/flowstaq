@@ -64,6 +64,9 @@
   }
   &__heading {
     max-width: 65%;
+    @media (max-width: $breakpoint-md) {
+      max-width: 75%;
+    }
   }
   &__content {
     margin: 110px 0;

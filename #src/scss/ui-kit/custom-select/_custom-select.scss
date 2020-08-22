@@ -3,8 +3,11 @@
   // font-family: Arial;
   margin: 15px 0 90px 70px;
   @include transition(.3);
+  @media (min-width: $breakpoint-xxl) {
+    margin: 15px 0 120px 90px;
+  }
   @media (max-width: $breakpoint-md) {
-    margin: 15px 30px 90px 0;
+    margin: 10px 30px 10px 0;
   }
 }
 

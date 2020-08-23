@@ -325,120 +325,120 @@ document.addEventListener("DOMContentLoaded", function(event) {
     }, 500);
      // OPTIONAL - waits til next tick render to run code (prevents running in the middle of render tick)
      
-      window.requestAnimationFrame(function() {
-        if($(window).width() > 992) {
+    //   window.requestAnimationFrame(function() {
+    //     if($(window).width() > 992) {
 
-         // ANIMATIONS
-         //  Hero screen text and arrow
-          gsap.from('.text-inner-hero', {y: 140,opacity: 0,duration: .8, stagger: 0.1, ease: Power4.easeOut})
-          gsap.from('.scroll-down', {y: 150, opacity: 0, duration: 1, delay: 1, ease: "back.out(1.7)", y: 100 })
+    //      // ANIMATIONS
+    //      //  Hero screen text and arrow
+    //       gsap.from('.text-inner-hero', {y: 140,opacity: 0,duration: .8, stagger: 0.1, ease: Power4.easeOut})
+    //       gsap.from('.scroll-down', {y: 150, opacity: 0, duration: 1, delay: 1, ease: "back.out(1.7)", y: 100 })
 
-          // BASIC TEXT REVEAL
-          var $revealY = $('.text-inner');
-          $($revealY).each(function(i) {
-            gsap.from($revealY[i], {
-              scrollTrigger: {
-                trigger: $revealY[i],
-              },
-              y: 140,
-              opacity: 0,
-              duration: .7,
-              ease: Power4.easeOut
-            })
-          })
+    //       // BASIC TEXT REVEAL
+    //       var $revealY = $('.text-inner');
+    //       $($revealY).each(function(i) {
+    //         gsap.from($revealY[i], {
+    //           scrollTrigger: {
+    //             trigger: $revealY[i],
+    //           },
+    //           y: 140,
+    //           opacity: 0,
+    //           duration: .7,
+    //           ease: Power4.easeOut
+    //         })
+    //       })
 
-          // IMAGE REVEAL
-          var controller = new ScrollMagic.Controller();
-          $(".reveal-image").each(function() {
-            var tl = new TimelineMax();
-            var cov = $(this).find(".overlay");
-            var img = $(this).find("img");
-            var text = $(this).find('.text-reveal-left');
+    //       // IMAGE REVEAL
+    //       var controller = new ScrollMagic.Controller();
+    //       $(".reveal-image").each(function() {
+    //         var tl = new TimelineMax();
+    //         var cov = $(this).find(".overlay");
+    //         var img = $(this).find("img");
+    //         var text = $(this).find('.text-reveal-left');
 
-            tl.from(cov, .7, { scaleY: 0, transformOrigin: "top" });
-            tl.to(cov, .7, { scaleY: 0, transformOrigin: "bottom" }, "reveal");
-            tl.from(img, 0, { opacity: 0 }, "reveal");
-            tl.from(text, 1, { x: 70, opacity: 0, duration: 1.3, ease: Power4.easeOut}, "reveal");
+    //         tl.from(cov, .7, { scaleY: 0, transformOrigin: "top" });
+    //         tl.to(cov, .7, { scaleY: 0, transformOrigin: "bottom" }, "reveal");
+    //         tl.from(img, 0, { opacity: 0 }, "reveal");
+    //         tl.from(text, 1, { x: 70, opacity: 0, duration: 1.3, ease: Power4.easeOut}, "reveal");
 
-            var scene = new ScrollMagic.Scene({
-              triggerElement: this,
-              triggerHook: 1,
-            })
-              .setTween(tl)
-              .addTo(controller);
-          });
+    //         var scene = new ScrollMagic.Scene({
+    //           triggerElement: this,
+    //           triggerHook: 1,
+    //         })
+    //           .setTween(tl)
+    //           .addTo(controller);
+    //       });
 
-          var controllerBlock = new ScrollMagic.Controller();
-          $(".reveal-block").each(function() {
-            var tl = new TimelineMax();
-            var cov = $(this).find(".overlay");
-            var img = $(this).find("img");
-            var text = $(this).find('.cases__item_content');
+    //       var controllerBlock = new ScrollMagic.Controller();
+    //       $(".reveal-block").each(function() {
+    //         var tl = new TimelineMax();
+    //         var cov = $(this).find(".overlay");
+    //         var img = $(this).find("img");
+    //         var text = $(this).find('.cases__item_content');
 
-            tl.from(cov, .7, { scaleY: 0, transformOrigin: "top" });
-            tl.to(cov, .7, { scaleY: 0, transformOrigin: "bottom" }, "reveal");
-            tl.from(img, 0, { opacity: 0 }, "reveal");
-            tl.from(text, 1, { y: -70, opacity: 0, duration: 1.3, delay: .3, ease: Power4.easeOut}, "reveal");
+    //         tl.from(cov, .7, { scaleY: 0, transformOrigin: "top" });
+    //         tl.to(cov, .7, { scaleY: 0, transformOrigin: "bottom" }, "reveal");
+    //         tl.from(img, 0, { opacity: 0 }, "reveal");
+    //         tl.from(text, 1, { y: -70, opacity: 0, duration: 1.3, delay: .3, ease: Power4.easeOut}, "reveal");
 
-            var scene = new ScrollMagic.Scene({
-              triggerElement: this,
-              triggerHook: 1,
-            })
-              .setTween(tl)
-              .addTo(controllerBlock);
-          });
+    //         var scene = new ScrollMagic.Scene({
+    //           triggerElement: this,
+    //           triggerHook: 1,
+    //         })
+    //           .setTween(tl)
+    //           .addTo(controllerBlock);
+    //       });
 
 
-          // TOOLS ITEMS
-          var $blockReveal = $('.tools__item, .services__item, .platforms__item, .clients__item');
-          $($blockReveal).each(function(i) {
-            gsap.from($blockReveal[i], {
-              scrollTrigger: {
-                trigger: $blockReveal[i],
-              },
-              y: 50,
-              opacity: 0,
-              scale: .9,
-              duration: .7,
-              ease: Power4.easeOut
-            })
-          })
+    //       // TOOLS ITEMS
+    //       var $blockReveal = $('.tools__item, .services__item, .platforms__item, .clients__item');
+    //       $($blockReveal).each(function(i) {
+    //         gsap.from($blockReveal[i], {
+    //           scrollTrigger: {
+    //             trigger: $blockReveal[i],
+    //           },
+    //           y: 50,
+    //           opacity: 0,
+    //           scale: .9,
+    //           duration: .7,
+    //           ease: Power4.easeOut
+    //         })
+    //       })
 
-          var $formControl = $('.form-control');
-          $($formControl).each(function(i) {
-            gsap.from($formControl[i], {
-              scrollTrigger: {
-                trigger: $formControl[i],
-              },
-              y: 100,
-              opacity: 0,
-              duration: 1,
-              ease: Power4.easeOut
-            })
-          })
+    //       var $formControl = $('.form-control');
+    //       $($formControl).each(function(i) {
+    //         gsap.from($formControl[i], {
+    //           scrollTrigger: {
+    //             trigger: $formControl[i],
+    //           },
+    //           y: 100,
+    //           opacity: 0,
+    //           duration: 1,
+    //           ease: Power4.easeOut
+    //         })
+    //       })
 
-          gsap.from('.steps__button', {
-            scrollTrigger: {
-              trigger: $('.steps__button')
-            },
-            y: 100,
-            opacity: 0,
-            ease: Power4.easeOut
-          })
+    //       gsap.from('.steps__button', {
+    //         scrollTrigger: {
+    //           trigger: $('.steps__button')
+    //         },
+    //         y: 100,
+    //         opacity: 0,
+    //         ease: Power4.easeOut
+    //       })
 
-          var rellax = new Rellax('.rellax', {
-            speed: 10,
-            center: true,
-            wrapper: null,
-            round: true,
-            vertical: true,
-            horizontal: false
-          });  
-        } else {
-          null
-        }
+    //       var rellax = new Rellax('.rellax', {
+    //         speed: 10,
+    //         center: true,
+    //         wrapper: null,
+    //         round: true,
+    //         vertical: true,
+    //         horizontal: false
+    //       });  
+    //     } else {
+    //       null
+    //     }
        
-     });
+    //  });
 
 
     

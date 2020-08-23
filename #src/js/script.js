@@ -396,9 +396,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
               scrollTrigger: {
                 trigger: $blockReveal[i],
               },
-              y: 50,
+              y: 80,
               opacity: 0,
-              scale: .9,
+              // scale: 1,
               duration: .7,
               ease: Power4.easeOut
             })

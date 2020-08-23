@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 @font-face {
   font-family: "SpaceGrotesk";
   font-display: swap;
@@ -391,51 +393,129 @@ input[type=number] {
   color: #fff;
 }
 
-.breadcrumb {
-  top: 20px;
-}
-
-.breadcrumb .kama_breadcrumbs {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-.breadcrumb a {
-  display: block;
+.text-wrapper,
+.header-logo {
   position: relative;
-  margin-right: 20px;
+  overflow: hidden;
 }
 
-.breadcrumb a:before {
-  content: '';
-  width: 4px;
-  height: 4px;
-  background: #fff;
-  border-radius: 100px;
+.text-wrapper .text-inner,
+.text-wrapper .text-inner-hero,
+.text-wrapper .text-inner-workflow,
+.header-logo-inner {
+  position: relative;
+  font-weight: 700;
+}
+
+.info-block__image,
+.cases__item_image {
+  position: relative;
+  overflow: hidden;
+}
+
+.info-block__image .overlay,
+.cases__item_image .overlay {
   position: absolute;
-  right: -12px;
-  top: calc(50% - 2px);
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #8041F9;
 }
 
-.breadcrumb span {
-  font-size: 12px;
-  display: block;
+.preloader {
+  /*фиксированное позиционирование*/
+  position: fixed;
+  /* координаты положения */
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  /* фоновый цвет элемента */
+  background: #020202;
+  /* размещаем блок над всеми элементами на странице (это значение должно быть больше, чем у любого другого позиционированного элемента на странице) */
+  z-index: 1001;
 }
 
-.woocommerce-breadcrumb {
-  margin: 24px 12px 0 12px !important;
+.preloader__row {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  width: 70px;
+  height: 70px;
+  margin-top: -35px;
+  margin-left: -35px;
+  text-align: center;
+  -webkit-animation: preloader-rotate 2s infinite linear;
+          animation: preloader-rotate 2s infinite linear;
 }
 
-.woocommerce-breadcrumb a {
-  margin-right: 10px;
+.preloader__item {
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  background-color: #8041F9;
+  border-radius: 100%;
+  width: 35px;
+  height: 35px;
+  -webkit-animation: preloader-bounce 2s infinite ease-in-out;
+          animation: preloader-bounce 2s infinite ease-in-out;
 }
 
-.woocommerce-breadcrumb a:after {
-  content: '/';
-  margin-left: 10px;
+.preloader__item:last-child {
+  top: auto;
+  bottom: 0;
+  -webkit-animation-delay: -1s;
+          animation-delay: -1s;
+}
+
+@-webkit-keyframes preloader-rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes preloader-rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes preloader-bounce {
+  0%, 100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+
+  50% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes preloader-bounce {
+  0%, 100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+
+  50% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+.loaded_hiding .preloader {
+  -webkit-transition: 0.3s opacity;
+  -o-transition: 0.3s opacity;
+  transition: 0.3s opacity;
+  opacity: 0;
+}
+
+.loaded .preloader {
+  display: none;
 }
 
 .navbar {
@@ -529,31 +609,6 @@ input[type=number] {
   top: calc(50% - 2.5px);
   width: 0;
   right: 50%;
-}
-
-.lang {
-  margin-left: 24px;
-}
-
-.lang-item {
-  margin-left: 16px;
-}
-
-.lang-item a {
-  font-size: 18px;
-  font-size: calc(16px + (18 - 16) * ((100vw - 300px) / (1900 - 300)));
-  line-height: 1.3;
-  -webkit-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
-}
-
-.lang-item a:hover {
-  font-weight: 700;
-}
-
-.lang-item.current-lang a {
-  font-weight: 700;
 }
 
 .custom-select {
@@ -1566,10 +1621,6 @@ main {
 
 .hero-screen {
   position: relative;
-}
-
-.hero-screen {
-  position: relative;
   height: calc(100vh - 70px);
   margin-bottom: 250px;
 }
@@ -1608,7 +1659,7 @@ main {
 }
 
 .info-block__content {
-  padding: 0 0 0 90px;
+  margin: 0 0 0 90px;
   max-width: 82%;
 }
 
@@ -2747,7 +2798,7 @@ main {
   }
 
   .info-block__content {
-    padding-left: 0 0 0 120px;
+    margin-left: 0 0 0 120px;
   }
 
   .info-block__content p {
@@ -3025,6 +3076,11 @@ main {
 }
 
 @media (max-width: 991px) {
+  .info-block__image .overlay,
+  .cases__item_image .overlay {
+    display: none;
+  }
+
   .page-content blockquote:before {
     top: -60%;
   }
@@ -3056,7 +3112,7 @@ main {
 
   .info-block__content {
     max-width: 100%;
-    padding-left: 0;
+    margin-left: 0;
   }
 
   .tools-content {
@@ -3107,11 +3163,6 @@ main {
 }
 
 @media (max-width: 767px) {
-  .breadcrumb {
-    position: static;
-    padding-top: 20px;
-  }
-
   .navbar .cta-buttons {
     height: 180px;
   }
@@ -3269,7 +3320,7 @@ main {
   }
 
   .info-block__content {
-    padding: 0 0 50px 0;
+    margin: 0 0 50px 0;
   }
 
   .tools {

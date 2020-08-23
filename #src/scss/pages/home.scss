@@ -1,12 +1,11 @@
 @import "../abstracts/mixins";
 @import "../abstracts/variables";
-.hero-screen {
-  position: relative;
-}
+
 .hero-screen {
   position: relative;
   height: calc(100vh - 70px);
   margin-bottom: 250px;
+
   @media (min-width: $breakpoint-xxl) {
     height: calc(100vh - 90px);
   }
@@ -60,17 +59,17 @@
     }
   }
   &__content {
-    padding: 0 0 0 90px;
+    margin: 0 0 0 90px;
     max-width: 82%;
     @media (min-width: $breakpoint-xxl) {
-      padding-left: 0 0 0 120px;
+      margin-left: 0 0 0 120px;
     }
     @media (max-width: $breakpoint-lg) {
       max-width: 100%;
-      padding-left: 0;
+      margin-left: 0;
     }
     @media (max-width: $breakpoint-md) {
-      padding: 0 0 50px 0;
+      margin: 0 0 50px 0;
     }
     & p {
       font-size: 26px;

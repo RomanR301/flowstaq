@@ -390,7 +390,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 
           // TOOLS ITEMS
-          var $blockReveal = $('.tools__item, .services__item, .platforms__item, .clients__item');
+          var $blockReveal = $('.tools__item, .home-services .services__item, .platforms__item, .clients__item');
           $($blockReveal).each(function(i) {
             gsap.from($blockReveal[i], {
               scrollTrigger: {

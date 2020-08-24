@@ -398,8 +398,32 @@ document.addEventListener("DOMContentLoaded", function(event) {
               },
               y: 80,
               opacity: 0,
-              // scale: 1,
               duration: .7,
+              ease: Power4.easeOut
+            })
+          })
+
+          var $servicesListSingle = $('.services-list__single .services__item');
+          $($servicesListSingle).each(function(i) {
+            gsap.from($servicesListSingle[i], {
+              scrollTrigger: {
+                trigger: $servicesListSingle[i],
+              },
+              opacity: 0,
+              duration: 1,
+              ease: Power4.easeOut
+            })
+          })
+
+          var $teamItem = $('.team__item');
+          $($teamItem).each(function(i) {
+            gsap.from($teamItem[i], {
+              scrollTrigger: {
+                trigger: $teamItem[i],
+              },
+              y: 100,
+              opacity: 0,
+              duration: 1,
               ease: Power4.easeOut
             })
           })
@@ -417,31 +441,60 @@ document.addEventListener("DOMContentLoaded", function(event) {
             })
           })
 
-          gsap.from('.steps__button', {
-            scrollTrigger: {
-              trigger: $('.steps__button')
-            },
-            y: 100,
-            opacity: 0,
-            ease: Power4.easeOut
+          var $pageContentImg = $('.page-content img');
+          $($pageContentImg).each(function(i) {
+            gsap.from($pageContentImg[i], {
+              scrollTrigger: {
+                trigger: $pageContentImg[i],
+              },
+              y: 100,
+              opacity: 0,
+              duration: 1,
+              ease: Power4.easeOut
+            })
           })
 
-          var rellax = new Rellax('.rellax', {
-            speed: 10,
-            center: true,
-            wrapper: null,
-            round: true,
-            vertical: true,
-            horizontal: false
-          });  
+          var $pageContentTitle = $('.page-content__title');
+          $($pageContentTitle).each(function(i) {
+            gsap.from($pageContentTitle[i], {
+              scrollTrigger: {
+                trigger: $pageContentTitle[i],
+              },
+              y: 100,
+              opacity: 0,
+              duration: 1,
+              ease: Power4.easeOut
+            })
+          })
+            gsap.from('.steps__button', {
+              scrollTrigger: {
+                trigger: $('.steps__button')
+              },
+              y: 100,
+              opacity: 0,
+              ease: Power4.easeOut
+            })
+
+            var rellax = new Rellax('.rellax', {
+              speed: 10,
+              center: true,
+              wrapper: null,
+              round: true,
+              vertical: true,
+              horizontal: false
+            });  
+            var rellaxQuote = new Rellax('.page-content blockquote', {
+              speed: 3,
+              center: true,
+              wrapper: null,
+              round: true,
+              vertical: true,
+              horizontal: false
+            }); 
         } else {
           null
         }
-       
      });
-
-
-    
   };
   
 

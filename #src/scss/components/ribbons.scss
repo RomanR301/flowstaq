@@ -32,6 +32,36 @@ main {
   }
 }
 
+.other-page {
+  & .mribbon {
+    top: -110px;
+    right: -300px;
+    display: block;
+    @media (max-width: $breakpoint-sm) {
+      top: -70px;
+      right: -450px;
+    }
+    @media (max-width: $breakpoint-md) {
+      top: 40px;
+      right: -350px;
+    }
+
+    @media (max-width: $breakpoint-lg) {
+      top: 250px;
+      right: -210px;
+    }
+    @media (max-width: $breakpoint-xl) {
+      top: 190px;
+      right: -180px;
+    }
+    @media (min-width: 1800px) {
+      top: -10px;
+      right: -240px;
+    }
+
+  }
+}
+
 
 
 

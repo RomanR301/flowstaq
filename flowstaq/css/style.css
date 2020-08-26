@@ -1206,6 +1206,12 @@ main {
   left: -120px;
 }
 
+.other-page .mribbon {
+  top: -110px;
+  right: -300px;
+  display: block;
+}
+
 .ribbon {
   position: absolute;
   z-index: -1;
@@ -2138,6 +2144,21 @@ main {
   margin-top: 60px;
 }
 
+.other-page {
+  height: calc(100vh - 70px);
+}
+
+.error-page-image {
+  margin-bottom: 60px;
+}
+
+.error-page-text h1,
+.error-page-text p {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
 .team-subtitle__first {
   margin: 70px 0 0 0;
 }
@@ -2713,6 +2734,11 @@ main {
     margin-bottom: 180px;
   }
 
+  .other-page .mribbon {
+    top: -10px;
+    right: -240px;
+  }
+
   .ribbon {
     -webkit-transform: scale(1);
         -ms-transform: scale(1);
@@ -3045,6 +3071,11 @@ main {
     margin: 250px 0 200px 110px;
   }
 
+  .other-page .mribbon {
+    top: 190px;
+    right: -180px;
+  }
+
   .ribbon-testimonial {
     top: -1400px;
     right: 160px;
@@ -3101,6 +3132,11 @@ main {
 
   .page-content__item .page-content {
     margin: 0;
+  }
+
+  .other-page .mribbon {
+    top: 250px;
+    right: -210px;
   }
 
   .ribbon-testimonial {
@@ -3240,6 +3276,11 @@ main {
 
   .mribbon-contact {
     top: 260px;
+  }
+
+  .other-page .mribbon {
+    top: 40px;
+    right: -350px;
   }
 
   .ribbon {
@@ -3527,6 +3568,24 @@ main {
     margin-top: 20px;
   }
 
+  .other-page {
+    height: auto;
+  }
+
+  .error-page {
+    margin: 64px 0 80px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+
   .team-subtitle__first {
     margin: 30px 0 30px 0;
   }
@@ -3622,6 +3681,11 @@ main {
     left: 0;
     font-size: 14px;
     padding: 10px;
+  }
+
+  .other-page .mribbon {
+    top: -70px;
+    right: -450px;
   }
 
   .m-row {

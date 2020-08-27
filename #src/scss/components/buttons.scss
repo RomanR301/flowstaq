@@ -12,6 +12,7 @@
   & span {
     font-size: 12px;
     max-width: 80%;
+    line-height: 1.4;
     @include transition(.3);
     @media (min-width: $breakpoint-xxl) {
       font-size: 14px;

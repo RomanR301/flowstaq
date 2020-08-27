@@ -47,7 +47,7 @@
     }
     // single case
     &_modified {
-      margin-top: 250px;
+      margin-top: 200px;
       position: relative;
       &:before {
         content: '';
@@ -83,9 +83,9 @@
   }
   // single case
   &__item {
-    margin-bottom: 140px;
+    margin-bottom: 80px;
     @media (min-width: $breakpoint-xxl) {
-      margin-bottom: 180px;
+      margin-bottom: 120px;
     }
     @media (max-width: $breakpoint-lg) {
       margin-bottom: 80px;

@@ -72,32 +72,30 @@ main {
   @media (max-width: $breakpoint-md) {
     display: none;
   }
-  transform: scale(.8);
   &-home {
     &-hero {
-      right: -130px;
-      top: -710px;
+      right: -60px;
+      top: -690px;
     }
     &-info-second {
-      top: -880px;
-      right: -480px;
+      top: -970px;
+      right: -640px;
     }
     &-info-third {
-      top: -1850px;
-      left: -1040px;
+      top: -1830px;
+      left: -1300px;
     }
     &-clients {
-      top: -770px;
-      right: -570px;
+      top: -1070px;
+      right: -670px;
     }
     &-contact {
-      right: -40px;
-      top: -1340px;
+      left: -590px;
+      top: -1320px;
     }
   }
   &-services {
     &-hero {
-      // right: -240px;
       right: -50px;
       top: -810px;
     }
@@ -112,8 +110,6 @@ main {
       top: -960px;
     }
     &-bottom {
-      // bottom: -1000px;
-      // left: -610px;
       left: -450px;
       bottom: -900px;
     }
@@ -125,9 +121,17 @@ main {
 }
 @media (max-width: $breakpoint-lg) {
   .ribbon {
+    transform: scale(.7);
+    &-home {
+      &-contact {
+        left: -1360px;
+        top: -1190px;
+      }
+    }
     &-testimonial {
       right: 100px;
     }
+
   }
 }
 @media (max-width: $breakpoint-xl) {
@@ -144,24 +148,28 @@ main {
     &-home {
       &-info-third {
         top: -1780px;
-        left: -910px;
+        left: -1110px;
       }
       &-contact { 
-        right: 30px;
-        top: -1370px;
+        left: -520px;
+        top: -1320px;
       }
     }
   }
 }
 @media (min-width: 1800px) {
   .ribbon {
-    transform: scale(1);
     &-home {
       &-hero {
-        right: -60px;
+        right: -30px;
+        top: -630px;
+      }
+      &-info-second {
+        top: -950px;
+        right: -450px;
       }
       &-info-third {
-        left: -990px;
+        left: -760px;
         top: -1790px;
       }
       &-clients {
@@ -169,8 +177,8 @@ main {
         right: -500px;
       }
       &-contact {
-        right: 210px;
-        top: -1280px;
+        left: -300px;
+        top: -1320px;
       }
     }
     &-services {
@@ -186,7 +194,10 @@ main {
     &-team {
       &-hero {
         top: -580px;
-        right: -70px;
+        right: 120px;
+      }
+      &-bottom {
+        left: -390px;
       }
     }
     &-calendar {
@@ -198,21 +209,25 @@ main {
 @media (min-width: 2000px) {
   .ribbon {
     &-home {
+      &-hero {
+        right: 140px;
+        top: -530px;
+      }
       &-info-second {
-        top: -840px;
-        right: -310px;
+        top: -1040px;
+        right: -320px;
       }
       &-info-third {
-        left: -870px;
+        // left: -760px;
       }
       &-contact {
-        right: 450px;
-        top: -1290px;
+        // right: 450px;
+        // top: -1290px;
       }
     }
     &-services {
       &-hero {
-        right: 90px;
+        right: 170px;
         top: -600px;
       }
     }

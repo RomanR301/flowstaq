@@ -4,6 +4,15 @@
 .navbar {
   background: $blackColor;
   transition: all .3s ease-in-out;
+  margin-left: 130px;
+  display: flex;
+  align-items: center;
+  @media (min-width: 1600px) {
+    margin-left: 0;
+  }
+  @media (max-width: $breakpoint-sm) {
+    align-items: flex-start;
+  }
   @media (max-width: $breakpoint-xl) {
     position: fixed;
     width: 100%;
@@ -19,7 +28,7 @@
     }
   }
   & .cta-buttons {
-    display: none;
+    // display: none;
     @media (max-width: $breakpoint-xl) {
       display: flex;
       justify-content: center;
@@ -35,6 +44,10 @@
   }
 }
 .menu {
+  margin-right: 20px;
+  @media (min-width: 1800px) {
+    margin-right: 0;
+  }
   @media (max-width: $breakpoint-xl) {
     flex-direction: column;
     align-items: center;

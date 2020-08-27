@@ -4,8 +4,7 @@
 .hero-screen {
   position: relative;
   height: calc(100vh - 70px);
-  margin-bottom: 250px;
-
+  margin-bottom: 150px;
   @media (min-width: $breakpoint-xxl) {
     height: calc(100vh - 90px);
   }
@@ -39,9 +38,9 @@
 }
 
 .info-block {
-  margin-bottom: 170px;
+  margin-bottom: 110px;
   @media (min-width: $breakpoint-xxl) {
-    margin-bottom: 210px;
+    margin-bottom: 140px;
   }
   @media (max-width: $breakpoint-md) {
     margin-bottom: 100px;
@@ -53,7 +52,7 @@
   }
 
   &__heading {
-    margin-bottom: 100px;
+    margin-bottom: 70px;
     @media (max-width: $breakpoint-md) {
       margin-bottom: 50px;
     }
@@ -86,7 +85,7 @@
 }
 
 .tools {
-  margin-bottom: 250px;
+  margin-bottom: 150px;
   @media (max-width: $breakpoint-md) {
     margin-bottom: 40px;
   }
@@ -105,7 +104,8 @@
       margin-bottom: 36px;
     }
     @media (max-width: $breakpoint-md) {
-      display: none;
+      // display: none;
+      text-align: right;
     }
   }
   &__list {
@@ -146,23 +146,23 @@
 }
 
 .services {
-  margin: 100px 0 250px 0;
+  margin: 100px 0 150px 0;
   @media (max-width: $breakpoint-md) {
     margin: 40px 0 60px 0;
   }
   &.home-services {
-    margin: 0 0 300px 0;
+    margin: 0 0 130px 0;
     @media (min-width: $breakpoint-xxl) {
-      margin: 0 0 400px 0;
+      margin: 0 0 180px 0;
     }
     @media (max-width: $breakpoint-md) {
       margin: 0 0 100px 0;
     }
   }
   &__heading {
-    margin-bottom: 90px;
+    margin-bottom: 70px;
     @media (min-width: $breakpoint-xxl) {
-      margin-bottom: 120px;
+      margin-bottom: 100px;
     }
     @media (max-width: $breakpoint-md) {
       margin-bottom: 24px;
@@ -259,15 +259,15 @@
 }
 
 .platforms {
-  margin-bottom: 250px;
+  margin-bottom: 110px;
   @media (min-width: $breakpoint-xxl) {
-    margin-bottom: 330px;
+    margin-bottom: 140px;
   }
   @media (max-width: $breakpoint-md) {
     margin-bottom: 150px;
   }
   &__heading {
-    margin-bottom: 100px;
+    margin-bottom: 70px;
     @media (max-width: $breakpoint-md) {
       margin-bottom: 50px;
     }
@@ -297,9 +297,9 @@
 }
 
 .cases {
-  margin-bottom: 240px;
+  margin-bottom: 160px;
   @media (min-width: $breakpoint-xxl) {
-    margin-bottom: 300px;
+    margin-bottom: 220px;
   }
   @media (max-width: $breakpoint-md) {
     margin-bottom: 65px;
@@ -387,10 +387,10 @@
 }
 
 .clients {
-  margin-bottom: 220px;
+  margin-bottom: 140px;
   @media (min-width: $breakpoint-xxl) {
     // margin-bottom: 270px;
-    margin-bottom: 270px;
+    margin-bottom: 180px;
   }
   @media (max-width: $breakpoint-md) {
     margin-bottom: 40px;
@@ -447,9 +447,9 @@
 }
 
 .calendar {
-  margin-bottom: 120px;
+  margin-bottom: 80px;
   @media (min-width: $breakpoint-xxl) {
-    margin-bottom: 150px;
+    margin-bottom: 110px;
   }
   &__heading {
     margin-bottom: 50px;
@@ -464,87 +464,87 @@
   }
 }
 
-.steps {
-  &-container {
-    position: relative;
-    background: $darkPurpleColor;
-    padding: 120px 105px;
-    height: 700px;
-    margin-bottom: 230px;
-    @media (min-width: $breakpoint-xxl) {
-      margin-bottom: 270px;
-      padding: 145px 130px;
-      height: 900px;
-    }
-    @media (max-width: $breakpoint-md) {
-      height: auto;
-      padding: 15px 15px 225px 15px;
-      margin-bottom: 70px;
-    }
-  }
-  &__heading {
-    max-width: 60%;
-    margin-bottom: 35px;
-    @media (min-width: $breakpoint-xxl) {
-      margin-bottom: 50px;
-    }
-    @media (max-width: $breakpoint-lg) {
-      max-width: 100%;
-    }
-  }
-  &__description {
-    max-width: 40%;
-    @media (max-width: $breakpoint-lg) {
-      max-width: 100%;
-    }
-  }
-  &__button {
-    background: $purpleColor;
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    width: 340px;
-    height: 210px;
-    padding: 30px 20px 15px 30px;
-    cursor: pointer;
-    @include transition(.3);
-    &_text {
-      @include transition(.3);
-    }
-    @media (min-width: $breakpoint-xxl) {
-      width: 400px;
-      height: 250px;
-    }
-    @media (max-width: $breakpoint-md) {
-      width: 170px;
-      height: 170px;
-    }
-    & i {
-      text-align: right;
-      @include transition(.3);
-      &:before {
-        @include transition(.3);
-      }
-    }
-    &:hover {
-      background: $whiteColor;
-      & .steps__button_text {
-        color: $purpleColor;
-      }
-      & i {
-        transform: translate(0, 8px);
-        &:before {
-          color: $purpleColor;
-        }
-      }
-    }
-  }
-}
+// .steps {
+//   &-container {
+//     position: relative;
+//     background: $darkPurpleColor;
+//     padding: 120px 105px;
+//     height: 700px;
+//     margin-bottom: 230px;
+//     @media (min-width: $breakpoint-xxl) {
+//       margin-bottom: 270px;
+//       padding: 145px 130px;
+//       height: 900px;
+//     }
+//     @media (max-width: $breakpoint-md) {
+//       height: auto;
+//       padding: 15px 15px 225px 15px;
+//       margin-bottom: 70px;
+//     }
+//   }
+//   &__heading {
+//     max-width: 60%;
+//     margin-bottom: 35px;
+//     @media (min-width: $breakpoint-xxl) {
+//       margin-bottom: 50px;
+//     }
+//     @media (max-width: $breakpoint-lg) {
+//       max-width: 100%;
+//     }
+//   }
+//   &__description {
+//     max-width: 40%;
+//     @media (max-width: $breakpoint-lg) {
+//       max-width: 100%;
+//     }
+//   }
+//   &__button {
+//     background: $purpleColor;
+//     position: absolute;
+//     bottom: 20px;
+//     right: 20px;
+//     width: 340px;
+//     height: 210px;
+//     padding: 30px 20px 15px 30px;
+//     cursor: pointer;
+//     @include transition(.3);
+//     &_text {
+//       @include transition(.3);
+//     }
+//     @media (min-width: $breakpoint-xxl) {
+//       width: 400px;
+//       height: 250px;
+//     }
+//     @media (max-width: $breakpoint-md) {
+//       width: 170px;
+//       height: 170px;
+//     }
+//     & i {
+//       text-align: right;
+//       @include transition(.3);
+//       &:before {
+//         @include transition(.3);
+//       }
+//     }
+//     &:hover {
+//       background: $whiteColor;
+//       & .steps__button_text {
+//         color: $purpleColor;
+//       }
+//       & i {
+//         transform: translate(0, 8px);
+//         &:before {
+//           color: $purpleColor;
+//         }
+//       }
+//     }
+//   }
+// }
 
 .contacts {
-  margin-bottom: 200px;
+  margin-bottom: 130px;
   @media (min-width: $breakpoint-xxl) {
-    margin-bottom: 250px;
+    margin-bottom: 180px;
   }
   @media (max-width: $breakpoint-md) {
     margin-bottom: 50px;

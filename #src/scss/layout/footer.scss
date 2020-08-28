@@ -101,11 +101,19 @@
       right: 20px;
       bottom: 20px;
       width: auto;
+      @media (max-width: $breakpoint-md) {
+        font-weight: 700;
+        bottom: 12px;
+
+      }
     }
     &:hover {
       & i {
         color: $purpleColor;
         transform: translate(0, 8px);
+        @media (max-width: $breakpoint-md) {
+          transform: translate(0, 0);
+        }
       }
     }
   }

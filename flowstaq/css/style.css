@@ -2074,7 +2074,7 @@ main {
 }
 
 .contacts-single {
-  margin-top: 180px;
+  margin-top: 120px;
 }
 
 .calendar-single {
@@ -2876,7 +2876,7 @@ main {
   }
 
   .contacts-single {
-    margin-top: 250px;
+    margin-top: 150px;
   }
 
   .calendar-single {
@@ -3021,15 +3021,6 @@ main {
 
   .platforms__item {
     margin: 0 100px 30px 0;
-  }
-
-  .cases__item_description {
-    overflow: hidden;
-    -o-text-overflow: ellipsis;
-       text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 4;
-    -webkit-box-orient: vertical;
   }
 
   .clients__item {
@@ -3266,6 +3257,17 @@ main {
   .footer .cta span {
     font-size: 22px;
     max-width: 90%;
+  }
+
+  .footer .cta i {
+    font-weight: 700;
+    bottom: 12px;
+  }
+
+  .footer .cta:hover i {
+    -webkit-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+            transform: translate(0, 0);
   }
 
   .hero-screen {
